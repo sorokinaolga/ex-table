@@ -1,0 +1,8 @@
+footer,
+header {
+  background-color: var(--code-bg);
+  height: 90px;
+}
+section {
+  height: calc(100vh - 180px);
+}
