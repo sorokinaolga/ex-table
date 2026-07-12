@@ -1,0 +1,14 @@
+node_modules
+dist
+*.log
+.env
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+
+eslint.config.js
+README.md
+tsconfig.json
+vite.config.ts
+.prettierrc

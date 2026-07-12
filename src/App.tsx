@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <section>Таблица</section>
       <footer>Подвал</footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
