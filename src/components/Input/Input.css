@@ -1,0 +1,124 @@
+.input {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.input--full-width {
+  width: 100%;
+}
+
+.input__label {
+  font-size: var(--input-label-font);
+  font-weight: 500;
+  color: var(--input-label);
+  line-height: 1.2;
+}
+
+.input__required {
+  color: var(--input-label-required);
+}
+
+.input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius);
+  background: var(--input-bg);
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
+}
+
+.input__wrapper:hover {
+  border-color: var(--input-border-hover);
+}
+
+.input__wrapper:focus-within {
+  border-color: var(--input-border-focus);
+  box-shadow: var(--input-focus-ring);
+}
+
+.input__field {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--input-fg);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.input__field::placeholder {
+  color: var(--input-placeholder);
+}
+
+.input--size-xs .input__wrapper {
+  height: var(--input-height-xs);
+  padding: var(--input-padding-xs);
+  font-size: var(--input-font-xs);
+}
+.input--size-sm .input__wrapper {
+  height: var(--input-height-sm);
+  padding: var(--input-padding-sm);
+  font-size: var(--input-font-sm);
+}
+.input--size-md .input__wrapper {
+  height: var(--input-height-md);
+  padding: var(--input-padding-md);
+  font-size: var(--input-font-md);
+}
+
+.input__section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--input-placeholder);
+  flex: 0 0 auto;
+}
+
+.input__section--left {
+  margin-right: 8px;
+}
+
+.input__section--right {
+  margin-left: 8px;
+}
+
+.input--error .input__wrapper {
+  border-color: var(--input-error);
+}
+.input--error .input__wrapper:focus-within {
+  box-shadow: 0 0 0 3px rgba(224, 49, 49, 0.2);
+}
+
+.input__error {
+  font-size: var(--input-error-font);
+  color: var(--input-error);
+  line-height: 1.2;
+}
+
+.input__description {
+  font-size: var(--input-error-font);
+  color: var(--input-description);
+  line-height: 1.2;
+}
+
+.input--disabled .input__wrapper {
+  background: var(--input-disabled-bg);
+  border-color: var(--input-disabled-border);
+  cursor: not-allowed;
+}
+.input--disabled .input__field {
+  color: var(--input-disabled-fg);
+  cursor: not-allowed;
+}
+.input--disabled .input__field::placeholder {
+  color: var(--input-disabled-fg);
+}

@@ -1,5 +1,6 @@
 import './App.css';
 import { Button } from './components/Button/Button';
+import { Input } from './components/Input/Input';
 import { useTheme } from './theme/useTheme';
 
 function ThemeSwitcher() {
@@ -16,14 +17,18 @@ function App() {
     <>
       <header style={{ display: 'flex', gap: 16 }}>
         Заголовок
-        <Button variant="default" size="xs">
-          Default
-        </Button>
-        <Button variant="accent" size="sm" leftSection={<span>✓</span>}>
+        <Input
+          placeholder="Поиск..."
+          leftSection={
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          }
+          fullWidth
+        />
+        <Button variant="default" size="sm" leftSection={<span>✓</span>}>
           Accent
-        </Button>
-        <Button variant="warning" size="md">
-          Warning
         </Button>
         <ThemeSwitcher />
       </header>
