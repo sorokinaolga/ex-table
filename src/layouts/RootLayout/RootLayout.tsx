@@ -1,7 +1,7 @@
-import './App.css';
-import { Button } from './components/Button/Button';
-import { Input } from './components/Input/Input';
-import { useTheme } from './theme/useTheme';
+import './RootLayout.css';
+import { Button } from '../../components/Button/Button';
+import { Input } from '../../components/Input/Input';
+import { useTheme } from '../../theme/useTheme';
 
 function ThemeSwitcher() {
   const { colorScheme, toggle } = useTheme();
@@ -12,7 +12,7 @@ function ThemeSwitcher() {
   );
 }
 
-function App() {
+export function RootLayout() {
   return (
     <>
       <header style={{ display: 'flex', gap: 16 }}>
@@ -37,5 +37,3 @@ function App() {
     </>
   );
 }
-
-export default App;
