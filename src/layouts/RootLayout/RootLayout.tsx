@@ -1,7 +1,8 @@
-import './RootLayout.css';
+import { Outlet } from 'react-router';
 import { Button } from '../../components/Button/Button';
 import { Input } from '../../components/Input/Input';
 import { useTheme } from '../../theme/useTheme';
+import './RootLayout.css';
 
 function ThemeSwitcher() {
   const { colorScheme, toggle } = useTheme();
@@ -14,9 +15,10 @@ function ThemeSwitcher() {
 
 export function RootLayout() {
   return (
-    <>
-      <header style={{ display: 'flex', gap: 16 }}>
-        Заголовок
+    <div className="root-layout">
+      <header className="root-layout__header">
+        <span className="root-layout__brand">Таблицы</span>
+
         <Input
           placeholder="Поиск..."
           leftSection={
@@ -27,13 +29,15 @@ export function RootLayout() {
           }
           fullWidth
         />
-        <Button variant="default" size="sm" leftSection={<span>✓</span>}>
-          Accent
-        </Button>
+
         <ThemeSwitcher />
       </header>
-      <section>Таблица</section>
-      <footer>Подвал</footer>
-    </>
+
+      <main className="root-layout__main">
+        <Outlet />
+      </main>
+
+      <footer className="root-layout__footer">© {new Date().getFullYear()} ex-table</footer>
+    </div>
   );
 }
