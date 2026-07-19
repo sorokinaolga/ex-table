@@ -1,8 +1,46 @@
-footer,
-header {
-  background-color: var(--code-bg);
-  height: 90px;
+.root-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--layout-bg);
+  color: var(--layout-fg);
 }
-section {
-  height: calc(100vh - 180px);
+
+.root-layout__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: var(--layout-header-height);
+  padding: 0 24px;
+  background: var(--layout-header-bg);
+  border-bottom: 1px solid var(--layout-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.root-layout__brand {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.root-layout__main {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.root-layout__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--layout-footer-height);
+  padding: 0 24px;
+  background: var(--layout-footer-bg);
+  border-top: 1px solid var(--layout-border);
+  font-size: 13px;
+  color: var(--input-placeholder);
 }
