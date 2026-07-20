@@ -10,7 +10,10 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="/spreadsheets" replace /> },
       { path: 'spreadsheets', element: <SpreadsheetsPage /> },
-      { path: 'spreadsheets/:id', element: <SpreadsheetPage /> },
     ],
+  },
+  {
+    path: '/spreadsheets/:id',
+    element: <SpreadsheetPage />,
   },
 ]);
