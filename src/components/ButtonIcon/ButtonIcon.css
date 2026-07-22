@@ -1,0 +1,90 @@
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--icon-btn-radius);
+  cursor: pointer;
+  user-select: none;
+  font: inherit;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+.icon-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--icon-btn-focus-ring);
+}
+.icon-btn:disabled {
+  cursor: not-allowed;
+  opacity: var(--icon-btn-disabled-opacity);
+}
+.icon-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.icon-btn__icon > svg {
+  width: 1em;
+  height: 1em;
+}
+.icon-btn--size-xs {
+  width: var(--icon-btn-size-xs);
+  height: var(--icon-btn-size-xs);
+  font-size: var(--icon-btn-icon-xs);
+}
+.icon-btn--size-sm {
+  width: var(--icon-btn-size-sm);
+  height: var(--icon-btn-size-sm);
+  font-size: var(--icon-btn-icon-sm);
+}
+.icon-btn--size-md {
+  width: var(--icon-btn-size-md);
+  height: var(--icon-btn-size-md);
+  font-size: var(--icon-btn-icon-md);
+}
+.icon-btn--shape-square {
+  border-radius: 0;
+}
+.icon-btn--shape-rounded {
+  border-radius: var(--icon-btn-radius);
+}
+.icon-btn--shape-circle {
+  border-radius: 50%;
+}
+.icon-btn--variant-default {
+  background: var(--icon-btn-default-bg);
+  color: var(--icon-btn-default-fg);
+  border-color: var(--icon-btn-default-border);
+}
+.icon-btn--variant-default:hover:not(:disabled) {
+  background: var(--icon-btn-default-bg-hover);
+}
+
+.icon-btn--variant-accent {
+  background: var(--icon-btn-accent-bg);
+  color: var(--icon-btn-accent-fg);
+}
+.icon-btn--variant-accent:hover:not(:disabled) {
+  background: var(--icon-btn-accent-bg-hover);
+}
+
+.icon-btn--variant-warning {
+  background: var(--icon-btn-warning-bg);
+  color: var(--icon-btn-warning-fg);
+}
+.icon-btn--variant-warning:hover:not(:disabled) {
+  background: var(--icon-btn-warning-bg-hover);
+}
+
+.icon-btn--variant-subtle {
+  background: var(--icon-btn-subtle-bg);
+  color: var(--icon-btn-subtle-fg);
+}
+.icon-btn--variant-subtle:hover:not(:disabled) {
+  background: var(--icon-btn-subtle-bg-hover);
+}
