@@ -16,20 +16,6 @@
   border-bottom: 1px solid var(--sheet-toolbar-border);
 }
 
-.sheet__back {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 4px;
-  color: inherit;
-  text-decoration: none;
-}
-.sheet__back:hover {
-  background: var(--sheet-tabbar-bg);
-}
-
 .sheet__doc-title {
   font-size: 14px;
   font-weight: 500;
@@ -171,25 +157,6 @@
 
 .sheet__tabbar-spacer {
   flex: 1 1 auto;
-}
-
-.sheet__tab-icon,
-.sheet__tab-nav {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border: none;
-  border-radius: 4px;
-  background: transparent;
-  color: var(--sheet-header-fg);
-  cursor: pointer;
-  font-size: 14px;
-}
-.sheet__tab-icon:hover,
-.sheet__tab-nav:hover {
-  background: var(--sheet-tab-border);
 }
 
 .sheet__tab {

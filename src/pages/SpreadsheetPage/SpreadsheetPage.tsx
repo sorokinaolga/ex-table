@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import './SpreadsheetPage.css';
+import { ButtonIcon } from '../../components/ButtonIcon';
+import { ArrowLeftIcon, MenuIcon, MoreHorizontalIcon, PlusIcon, ChevronLeftIcon, ChevronRightIcon, ChevronDownIcon } from '../../components/icons';
+import { Button } from '../../components/Button';
 
 const COLS = 15;
 const ROWS = 30;
@@ -111,12 +114,19 @@ export function SpreadsheetPage() {
   return (
     <div className="sheet">
       <div className="sheet__toolbar">
-        <Link to="/" className="sheet__back" aria-label="Назад">
-          ←
+        <Link to="/" aria-label="Назад">
+          <ButtonIcon variant="subtle" shape="circle" size="sm" aria-label="Назад">
+            <ArrowLeftIcon />
+          </ButtonIcon>
         </Link>
+
         <div className="sheet__doc-title">Таблица #{id}</div>
+
         <div className="sheet__toolbar-spacer" />
-        <div className="sheet__formula">fx</div>
+
+        <ButtonIcon variant="subtle" shape="circle" size="sm" aria-label="Ещё">
+          <MoreHorizontalIcon />
+        </ButtonIcon>
       </div>
 
       <div className="sheet__grid" style={gridStyle} tabIndex={0} onKeyDown={handleKeyDown}>
@@ -148,22 +158,27 @@ export function SpreadsheetPage() {
       </div>
 
       <div className="sheet__tabbar">
-        <button type="button" className="sheet__tab-icon" aria-label="Добавить лист">
-          ＋
-        </button>
-        <button type="button" className="sheet__tab-icon" aria-label="Все листы">
-          ☰
-        </button>
+        <ButtonIcon variant="subtle" shape="rounded" size="sm" aria-label="Добавить лист">
+          <PlusIcon />
+        </ButtonIcon>
+
+        <ButtonIcon variant="subtle" shape="rounded" size="sm" aria-label="Все листы">
+          <MenuIcon />
+        </ButtonIcon>
+
         <button type="button" className="sheet__tab sheet__tab--active">
-          Лист1 <span className="sheet__tab-caret">▾</span>
+          Лист1 <ChevronDownIcon />
         </button>
+
         <div className="sheet__tabbar-spacer" />
-        <button type="button" className="sheet__tab-nav" aria-label="В начало">
-          ‹
-        </button>
-        <button type="button" className="sheet__tab-nav" aria-label="В конец">
-          ›
-        </button>
+
+        <ButtonIcon variant="subtle" shape="rounded" size="sm" aria-label="В начало">
+          <ChevronLeftIcon />
+        </ButtonIcon>
+
+        <ButtonIcon variant="subtle" shape="rounded" size="sm" aria-label="В конец">
+          <ChevronRightIcon />
+        </ButtonIcon>
       </div>
     </div>
   );
