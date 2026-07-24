@@ -1,15 +1,15 @@
 import { Outlet } from 'react-router';
-import { Button } from '../../components/Button/Button';
 import { Input } from '../../components/Input/Input';
 import { useTheme } from '../../theme/useTheme';
+import { ButtonIcon } from '../../components/ButtonIcon';
 import './RootLayout.css';
 
 function ThemeSwitcher() {
   const { colorScheme, toggle } = useTheme();
   return (
-    <Button variant="default" onClick={toggle}>
-      {colorScheme === 'light' ? '🌙 Тёмная' : '☀️ Светлая'}
-    </Button>
+    <ButtonIcon variant="default" onClick={toggle}>
+      {colorScheme === 'light' ? '🌙' : '☀️'}
+    </ButtonIcon>
   );
 }
 
