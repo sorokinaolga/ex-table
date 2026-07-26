@@ -4,12 +4,12 @@
   overflow: auto;
   outline: none;
   background: var(--sheet-bg);
+  align-content: start;
 }
 
 .sheet__corner,
 .sheet__col-header,
 .sheet__row-header {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,10 +19,10 @@
   user-select: none;
   border-right: 1px solid var(--sheet-grid);
   border-bottom: 1px solid var(--sheet-grid);
-  position: sticky;
 }
 
 .sheet__col-header {
+  position: sticky;
   top: 0;
   z-index: 2;
   cursor: pointer;
@@ -34,6 +34,7 @@
 }
 
 .sheet__row-header {
+  position: sticky;
   left: 0;
   z-index: 1;
   cursor: pointer;
@@ -100,7 +101,6 @@
 
 .sheet__cell-input {
   width: 100%;
-  height: 100%;
   border: none;
   outline: none;
   padding: 0 4px;

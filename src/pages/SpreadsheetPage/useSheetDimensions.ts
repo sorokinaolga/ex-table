@@ -57,6 +57,8 @@ function reducer(state: State, action: Action): State {
       const min = r.axis === 'col' ? MIN_COL_WIDTH : MIN_ROW_HEIGHT;
       const next = Math.max(min, Math.round(r.startSize + delta));
 
+      console.log('UPDATE_RESIZE', r.axis, r.index, 'delta', delta, 'next', next);
+
       if (r.axis === 'col') {
         if (state.dimensions.colWidths[r.index] === next) return state;
         const colWidths = [...state.dimensions.colWidths];

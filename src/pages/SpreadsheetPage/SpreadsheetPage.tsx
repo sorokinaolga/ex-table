@@ -44,7 +44,7 @@ export function SpreadsheetPage() {
   const gridStyle = useMemo(
     () => ({
       gridTemplateColumns: `var(--sheet-row-header-width) ` + colWidths.map((w) => `${w}px`).join(' '),
-      gridTemplateRows: `var(--sheet-row-height) ` + rowHeights.map((h) => `${h}px`).join(' '),
+      gridTemplateRows: `var(--sheet-cell-size) ` + rowHeights.map((h) => `${h}px`).join(' '),
     }),
     [colWidths, rowHeights]
   );
