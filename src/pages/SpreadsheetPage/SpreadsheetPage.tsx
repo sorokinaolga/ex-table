@@ -5,6 +5,7 @@ import { ArrowLeftIcon, ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, Menu
 import { useSheetData } from './useSheetData';
 import { useSheetDimensions } from './useSheetDimensions';
 import { SpreadsheetGrid } from './SpreadsheetGrid';
+import { useBeforeUnloadWarning } from '../../hooks/useBeforeUnloadWarning';
 import './SpreadsheetPage.css';
 
 const COLS = 15;
@@ -14,12 +15,17 @@ export function SpreadsheetPage() {
   const { id } = useParams<{ id: string }>();
   const sheetId = id ?? 'default';
 
-  const { data, setCell } = useSheetData(sheetId);
+  const { data, setCell, dirty } = useSheetData(sheetId);
+
   const { colWidths, rowHeights, resizing, startResize, autoFitCol, autoFitRow, resetDimensions } = useSheetDimensions(sheetId, COLS, ROWS);
 
   const [active, setActive] = useState({ row: 0, col: 0 });
   const [editing, setEditing] = useState<{ row: number; col: number } | null>(null);
   const [draft, setDraft] = useState('');
+
+  const hasUnsavedChanges = dirty || (editing !== null && draft !== '');
+
+  useBeforeUnloadWarning(hasUnsavedChanges);
 
   const startEdit = useCallback(
     (row: number, col: number) => {
