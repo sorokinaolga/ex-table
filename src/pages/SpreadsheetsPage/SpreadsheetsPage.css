@@ -1,3 +1,30 @@
+.spreadsheets__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.spreadsheets__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spreadsheets__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 48px 0;
+  color: var(--input-placeholder);
+}
+
+.spreadsheets__empty p {
+  margin: 0;
+}
+
 .spreadsheets__title {
   margin: 0 0 16px;
   font-size: 20px;
