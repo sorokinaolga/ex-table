@@ -93,3 +93,23 @@ export function clearAllSpreadsheets(): void {
   }
   clearSpreadsheets();
 }
+
+export function findSpreadsheet(id: string): SpreadsheetMeta | null {
+  const list = loadSpreadsheets();
+  return list.find((s) => s.id === id) ?? null;
+}
+
+export function renameSpreadsheet(id: string, title: string): SpreadsheetMeta | null {
+  const list = loadSpreadsheets();
+  const index = list.findIndex((s) => s.id === id);
+  if (index === -1) return null;
+
+  const trimmed = title.trim();
+  const nextTitle = trimmed === '' ? list[index].title : trimmed;
+
+  const next: SpreadsheetMeta = { ...list[index], title: nextTitle };
+  const nextList = [...list];
+  nextList[index] = next;
+  saveSpreadsheets(nextList);
+  return next;
+}

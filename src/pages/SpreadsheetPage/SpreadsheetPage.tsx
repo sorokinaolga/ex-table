@@ -1,11 +1,13 @@
 import { useCallback, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, Navigate, useParams } from 'react-router';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { ArrowLeftIcon, ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, MenuIcon, MoreHorizontalIcon, PlusIcon } from '../../components/icons';
 import { useSheetData } from './useSheetData';
 import { useSheetDimensions } from './useSheetDimensions';
 import { SpreadsheetGrid } from './SpreadsheetGrid';
 import { useBeforeUnloadWarning } from '../../hooks/useBeforeUnloadWarning';
+import { useSpreadsheetMeta } from './useSpreadsheetMeta';
+import { EditableTitle } from './EditableTitle';
 import './SpreadsheetPage.css';
 
 const COLS = 15;
@@ -14,6 +16,8 @@ const ROWS = 30;
 export function SpreadsheetPage() {
   const { id } = useParams<{ id: string }>();
   const sheetId = id ?? 'default';
+
+  const { meta, rename } = useSpreadsheetMeta(id);
 
   const { data, setCell, dirty } = useSheetData(sheetId);
 
@@ -55,6 +59,10 @@ export function SpreadsheetPage() {
     [colWidths, rowHeights]
   );
 
+  if (id && !meta) {
+    return <Navigate to="/spreadsheets" replace />;
+  }
+
   return (
     <div className="sheet">
       <div className="sheet__toolbar">
@@ -64,7 +72,7 @@ export function SpreadsheetPage() {
           </ButtonIcon>
         </Link>
 
-        <div className="sheet__doc-title">Таблица #{sheetId}</div>
+        <EditableTitle key={sheetId} value={meta?.title ?? ''} onChange={rename} placeholder="Без названия" />
 
         <div className="sheet__toolbar-spacer" />
 

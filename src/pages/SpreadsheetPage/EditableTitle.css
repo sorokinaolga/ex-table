@@ -1,0 +1,46 @@
+.editable-title__button {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: text;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.editable-title__button:hover {
+  background: var(--input-disabled-bg);
+  border-color: var(--input-border);
+}
+.editable-title__button:focus-visible {
+  outline: none;
+  border-color: var(--input-border-focus);
+  box-shadow: var(--input-focus-ring);
+}
+
+.editable-title__placeholder {
+  color: var(--input-placeholder);
+}
+
+.editable-title__input {
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--input-border-focus);
+  border-radius: 4px;
+  background: var(--input-bg);
+  color: var(--input-fg);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  box-shadow: var(--input-focus-ring);
+  max-width: 400px;
+}
