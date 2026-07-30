@@ -42,6 +42,16 @@
   border-top: 1px solid var(--list-border);
 }
 
+.spreadsheets__item {
+  display: flex;
+}
+
+.spreadsheets__row-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .spreadsheets__link {
   display: flex;
   align-items: center;
@@ -51,6 +61,7 @@
   text-decoration: none;
   border-radius: 6px;
   transition: background-color 120ms ease;
+  width: 100%;
 }
 .spreadsheets__link:hover {
   background: var(--list-hover-bg);

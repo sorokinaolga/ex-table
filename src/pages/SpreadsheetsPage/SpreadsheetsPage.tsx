@@ -1,11 +1,13 @@
 import { Link, useNavigate } from 'react-router';
 import { Button } from '../../components/Button/Button';
+import { ButtonIcon } from '../../components/ButtonIcon';
+import { TrashIcon } from '../../components/icons';
 import { useSpreadsheets } from './useSpreadsheets';
 import './SpreadsheetsPage.css';
 
 export function SpreadsheetsPage() {
   const navigate = useNavigate();
-  const { items, create, clear } = useSpreadsheets();
+  const { items, create, remove, clear } = useSpreadsheets();
 
   const handleCreate = () => {
     const meta = create();
@@ -15,6 +17,14 @@ export function SpreadsheetsPage() {
   const handleClearAll = () => {
     if (window.confirm('Удалить все таблицы? Действие необратимо.')) {
       clear();
+    }
+  };
+
+  const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: string, title: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (window.confirm(`Удалить таблицу «${title}»? Действие необратимо.`)) {
+      remove(id);
     }
   };
 
@@ -58,6 +68,12 @@ export function SpreadsheetsPage() {
                 <span className="spreadsheets__name">{s.title}</span>
                 <span className="spreadsheets__time">{formatRelative(s.createdAt)}</span>
               </Link>
+
+              <div className="spreadsheets__row-actions">
+                <ButtonIcon variant="subtle" shape="circle" size="sm" aria-label={`Удалить таблицу «${s.title}»`} onClick={(e) => handleDelete(e, s.id, s.title)}>
+                  <TrashIcon />
+                </ButtonIcon>
+              </div>
             </li>
           ))}
         </ul>
