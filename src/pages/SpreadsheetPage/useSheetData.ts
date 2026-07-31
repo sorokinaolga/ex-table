@@ -88,13 +88,17 @@ function reducer(state: State, action: Action): State {
 
 const DEBOUNCE_MS = 400;
 
-export function useSheetData(sheetId: string) {
-  const storageKey = STORAGE_KEYS.sheetData(sheetId);
+export function useSheetData(spreadsheetId: string, sheetId: string) {
+  const storageKey = STORAGE_KEYS.sheetData(spreadsheetId, sheetId);
 
   const [state, dispatch] = useReducer(reducer, undefined, () => ({
     data: loadData(storageKey),
     dirty: false,
   }));
+
+  useEffect(() => {
+    dispatch({ type: 'HYDRATE', data: loadData(storageKey) });
+  }, [storageKey]);
 
   useEffect(() => {
     if (!state.dirty) return;

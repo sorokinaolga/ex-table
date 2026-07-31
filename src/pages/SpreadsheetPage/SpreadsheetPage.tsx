@@ -4,10 +4,10 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { ArrowLeftIcon, ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, MenuIcon, MoreHorizontalIcon, PlusIcon } from '../../components/icons';
 import { useSheetData } from './useSheetData';
 import { useSheetDimensions } from './useSheetDimensions';
-import { SpreadsheetGrid } from './SpreadsheetGrid';
-import { useBeforeUnloadWarning } from '../../hooks/useBeforeUnloadWarning';
 import { useSpreadsheetMeta } from './useSpreadsheetMeta';
+import { SpreadsheetGrid } from './SpreadsheetGrid';
 import { EditableTitle } from './EditableTitle';
+import { useBeforeUnloadWarning } from '../../hooks/useBeforeUnloadWarning';
 import './SpreadsheetPage.css';
 
 const COLS = 15;
@@ -15,13 +15,15 @@ const ROWS = 30;
 
 export function SpreadsheetPage() {
   const { id } = useParams<{ id: string }>();
-  const sheetId = id ?? 'default';
+  const spreadsheetId = id ?? 'default';
 
-  const { meta, rename } = useSpreadsheetMeta(id);
+  const { meta, rename, addSheet, setActiveSheet } = useSpreadsheetMeta(id);
 
-  const { data, setCell, dirty } = useSheetData(sheetId);
+  const activeSheetId = meta?.activeSheetId ?? '';
+  const activeSheet = meta?.sheets.find((s) => s.id === activeSheetId) ?? null;
 
-  const { colWidths, rowHeights, resizing, startResize, autoFitCol, autoFitRow, resetDimensions } = useSheetDimensions(sheetId, COLS, ROWS);
+  const { data, setCell, dirty } = useSheetData(spreadsheetId, activeSheetId);
+  const { colWidths, rowHeights, resizing, startResize, autoFitCol, autoFitRow, resetDimensions } = useSheetDimensions(spreadsheetId, activeSheetId, COLS, ROWS);
 
   const [active, setActive] = useState({ row: 0, col: 0 });
   const [editing, setEditing] = useState<{ row: number; col: number } | null>(null);
@@ -66,13 +68,13 @@ export function SpreadsheetPage() {
   return (
     <div className="sheet">
       <div className="sheet__toolbar">
-        <Link to="/" aria-label="Назад">
+        <Link to="/spreadsheets" aria-label="Назад">
           <ButtonIcon variant="subtle" shape="circle" size="sm" aria-label="Назад">
             <ArrowLeftIcon />
           </ButtonIcon>
         </Link>
 
-        <EditableTitle key={sheetId} value={meta?.title ?? ''} onChange={rename} placeholder="Без названия" />
+        <EditableTitle key={spreadsheetId} value={meta?.title ?? ''} onChange={rename} placeholder="Без названия" />
 
         <div className="sheet__toolbar-spacer" />
 
@@ -81,30 +83,35 @@ export function SpreadsheetPage() {
         </ButtonIcon>
       </div>
 
-      <SpreadsheetGrid
-        rows={ROWS}
-        cols={COLS}
-        data={data}
-        colWidths={colWidths}
-        rowHeights={rowHeights}
-        active={active}
-        editing={editing}
-        draft={draft}
-        gridStyle={gridStyle}
-        onSelect={setActive}
-        onStartEdit={startEdit}
-        onChangeDraft={setDraft}
-        onCommit={commitEdit}
-        onCancel={cancelEdit}
-        onStartResize={startResize}
-        onAutoFitCol={(col) => autoFitCol(col, (r) => data[`${r}:${col}`] ?? '')}
-        onAutoFitRow={(row) => autoFitRow(row, (c) => data[`${row}:${c}`] ?? '', colWidths)}
-        onResetDimensions={resetDimensions}
-        isResizing={resizing !== null}
-      />
+      {activeSheet ? (
+        <SpreadsheetGrid
+          key={activeSheet.id}
+          rows={ROWS}
+          cols={COLS}
+          data={data}
+          colWidths={colWidths}
+          rowHeights={rowHeights}
+          active={active}
+          editing={editing}
+          draft={draft}
+          gridStyle={gridStyle}
+          onSelect={setActive}
+          onStartEdit={startEdit}
+          onChangeDraft={setDraft}
+          onCommit={commitEdit}
+          onCancel={cancelEdit}
+          onStartResize={startResize}
+          onAutoFitCol={(col) => autoFitCol(col, (r) => data[`${r}:${col}`] ?? '')}
+          onAutoFitRow={(row) => autoFitRow(row, (c) => data[`${row}:${c}`] ?? '', colWidths)}
+          onResetDimensions={resetDimensions}
+          isResizing={resizing !== null}
+        />
+      ) : (
+        <div className="sheet__empty">Нет активного листа</div>
+      )}
 
       <div className="sheet__tabbar">
-        <ButtonIcon variant="subtle" shape="rounded" size="sm" aria-label="Добавить лист">
+        <ButtonIcon variant="subtle" shape="rounded" size="sm" aria-label="Добавить лист" onClick={addSheet}>
           <PlusIcon />
         </ButtonIcon>
 
@@ -112,9 +119,11 @@ export function SpreadsheetPage() {
           <MenuIcon />
         </ButtonIcon>
 
-        <button type="button" className="sheet__tab sheet__tab--active">
-          Лист1 <ChevronDownIcon />
-        </button>
+        {meta?.sheets.map((sheet) => (
+          <button key={sheet.id} type="button" className={'sheet__tab' + (sheet.id === activeSheetId ? ' sheet__tab--active' : '')} onClick={() => setActiveSheet(sheet.id)}>
+            {sheet.title} {sheet.id === activeSheetId && <ChevronDownIcon />}
+          </button>
+        ))}
 
         <div className="sheet__tabbar-spacer" />
 

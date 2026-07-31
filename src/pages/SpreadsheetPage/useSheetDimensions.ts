@@ -137,8 +137,8 @@ function loadDimensions(key: string, cols: number, rows: number, defaults: { col
   }
 }
 
-export function useSheetDimensions(sheetId: string, cols: number, rows: number, defaults: { col: number; row: number } = { col: 100, row: 24 }) {
-  const storageKey = STORAGE_KEYS.sheetDimensions(sheetId);
+export function useSheetDimensions(spreadsheetId: string, sheetId: string, cols: number, rows: number, defaults: { col: number; row: number } = { col: 100, row: 24 }) {
+  const storageKey = STORAGE_KEYS.sheetDimensions(spreadsheetId, sheetId);
   const { col: defaultCol, row: defaultRow } = defaults;
 
   const [state, dispatch] = useReducer(reducer, undefined, () => ({
@@ -148,6 +148,16 @@ export function useSheetDimensions(sheetId: string, cols: number, rows: number, 
     }),
     resizing: null,
   }));
+
+  useEffect(() => {
+    dispatch({
+      type: 'HYDRATE',
+      dimensions: loadDimensions(storageKey, cols, rows, {
+        col: defaultCol,
+        row: defaultRow,
+      }),
+    });
+  }, [storageKey, cols, rows, defaultCol, defaultRow]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
