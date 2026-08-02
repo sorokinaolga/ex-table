@@ -49,6 +49,22 @@
   --icon-btn-icon-sm: 16px;
   --icon-btn-icon-md: 18px;
   --icon-btn-radius: 6px;
+
+  /* Chip */
+  --chip-height-xs: 20px;
+  --chip-height-sm: 24px;
+  --chip-height-md: 28px;
+  --chip-padding-xs: 0 6px;
+  --chip-padding-sm: 0 10px;
+  --chip-padding-md: 0 12px;
+  --chip-font-xs: 11px;
+  --chip-font-sm: 12px;
+  --chip-font-md: 13px;
+  --chip-radius-xs: 4px;
+  --chip-radius-sm: 6px;
+  --chip-radius-md: 8px;
+  --chip-radius-pill: 999px;
+  --chip-gap: 4px;
 }
 
 :root[data-theme='light'] {
@@ -136,6 +152,26 @@
 
   --icon-btn-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.4);
   --icon-btn-disabled-opacity: 0.5;
+
+  /* Chip */
+  --chip-default-bg: #f1f3f5;
+  --chip-default-fg: #212529;
+  --chip-default-border: #dee2e6;
+
+  --chip-accent-bg: #0ca678;
+  --chip-accent-fg: #ffffff;
+  --chip-accent-border: transparent;
+
+  --chip-warning-bg: #e8590c;
+  --chip-warning-fg: #ffffff;
+  --chip-warning-border: transparent;
+
+  --chip-subtle-bg: transparent;
+  --chip-subtle-fg: #495057;
+  --chip-subtle-border: #ced4da;
+
+  --chip-hover-overlay: rgba(0, 0, 0, 0.06);
+  --chip-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.35);
 }
 
 :root[data-theme='dark'] {
@@ -224,4 +260,24 @@
 
   --icon-btn-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.5);
   --icon-btn-disabled-opacity: 0.4;
+
+  /* Chip */
+  --chip-default-bg: #2a2a2e;
+  --chip-default-fg: #f1f3f5;
+  --chip-default-border: #3d3d44;
+
+  --chip-accent-bg: #12b886;
+  --chip-accent-fg: #081c15;
+  --chip-accent-border: transparent;
+
+  --chip-warning-bg: #f76707;
+  --chip-warning-fg: #ffffff;
+  --chip-warning-border: transparent;
+
+  --chip-subtle-bg: transparent;
+  --chip-subtle-fg: #adb5bd;
+  --chip-subtle-border: #3d3d44;
+
+  --chip-hover-overlay: rgba(255, 255, 255, 0.08);
+  --chip-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.45);
 }

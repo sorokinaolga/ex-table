@@ -1,0 +1,152 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--chip-gap);
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.chip:focus-visible {
+  outline: none;
+  box-shadow: var(--chip-focus-ring);
+}
+
+.chip--size-xs {
+  height: var(--chip-height-xs);
+  padding: var(--chip-padding-xs);
+  font-size: var(--chip-font-xs);
+  border-radius: var(--chip-radius-xs);
+}
+.chip--size-sm {
+  height: var(--chip-height-sm);
+  padding: var(--chip-padding-sm);
+  font-size: var(--chip-font-sm);
+  border-radius: var(--chip-radius-sm);
+}
+.chip--size-md {
+  height: var(--chip-height-md);
+  padding: var(--chip-padding-md);
+  font-size: var(--chip-font-md);
+  border-radius: var(--chip-radius-md);
+}
+
+.chip--shape-square {
+  border-radius: 0;
+}
+.chip--shape-pill {
+  border-radius: var(--chip-radius-pill);
+}
+
+.chip--variant-default {
+  background: var(--chip-default-bg);
+  color: var(--chip-default-fg);
+  border-color: var(--chip-default-border);
+}
+
+.chip--variant-accent {
+  background: var(--chip-accent-bg);
+  color: var(--chip-accent-fg);
+  border-color: var(--chip-accent-border);
+}
+
+.chip--variant-warning {
+  background: var(--chip-warning-bg);
+  color: var(--chip-warning-fg);
+  border-color: var(--chip-warning-border);
+}
+
+.chip--variant-subtle {
+  background: var(--chip-subtle-bg);
+  color: var(--chip-subtle-fg);
+  border-color: var(--chip-subtle-border);
+}
+
+.chip--interactive {
+  cursor: pointer;
+}
+.chip--interactive:hover {
+  background-color: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.chip--selected {
+  background: var(--chip-accent-bg);
+  color: var(--chip-accent-fg);
+  border-color: var(--chip-accent-border);
+}
+
+.chip--interactive.chip--selected:hover {
+  filter: brightness(0.95);
+}
+
+.chip--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.chip__section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.chip__section > svg {
+  width: 1em;
+  height: 1em;
+}
+
+.chip__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chip__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1em;
+  height: 1.1em;
+  margin-left: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition:
+    opacity 120ms ease,
+    background-color 120ms ease;
+}
+.chip__remove:hover {
+  opacity: 1;
+  background-color: var(--chip-hover-overlay);
+}
+.chip__remove:focus-visible {
+  outline: none;
+  opacity: 1;
+  box-shadow: 0 0 0 2px currentColor;
+}
+.chip__remove > svg {
+  width: 0.85em;
+  height: 0.85em;
+}
+
+.chip--with-remove {
+  padding-right: calc(var(--chip-padding-md) - 4px);
+}
+.chip--size-xs.chip--with-remove {
+  padding-right: 4px;
+}
+.chip--size-sm.chip--with-remove {
+  padding-right: 6px;
+}
+.chip--size-md.chip--with-remove {
+  padding-right: 8px;
+}
