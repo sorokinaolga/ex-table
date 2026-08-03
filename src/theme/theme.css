@@ -65,6 +65,19 @@
   --chip-radius-md: 8px;
   --chip-radius-pill: 999px;
   --chip-gap: 4px;
+
+  /* Checkbox */
+  --checkbox-size-xs: 14px;
+  --checkbox-size-sm: 16px;
+  --checkbox-size-md: 20px;
+  --checkbox-radius-xs: 3px;
+  --checkbox-radius-sm: 4px;
+  --checkbox-radius-md: 5px;
+  --checkbox-label-font-xs: 12px;
+  --checkbox-label-font-sm: 13px;
+  --checkbox-label-font-md: 14px;
+  --checkbox-desc-font: 12px;
+  --checkbox-gap: 8px;
 }
 
 :root[data-theme='light'] {
@@ -172,6 +185,28 @@
 
   --chip-hover-overlay: rgba(0, 0, 0, 0.06);
   --chip-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.35);
+
+  /* Checkbox */
+  --checkbox-bg: #ffffff;
+  --checkbox-border: #ced4da;
+  --checkbox-border-hover: #adb5bd;
+
+  --checkbox-checked-bg: #0ca678;
+  --checkbox-checked-bg-hover: #099268;
+  --checkbox-checked-border: #0ca678;
+  --checkbox-checked-fg: #ffffff;
+
+  --checkbox-indeterminate-bg: #0ca678;
+  --checkbox-indeterminate-fg: #ffffff;
+
+  --checkbox-label: #212529;
+  --checkbox-description: #868e96;
+  --checkbox-error: #e03131;
+
+  --checkbox-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.25);
+  --checkbox-disabled-opacity: 0.55;
+  --checkbox-disabled-bg: #f1f3f5;
+  --checkbox-disabled-border: #dee2e6;
 }
 
 :root[data-theme='dark'] {
@@ -280,4 +315,26 @@
 
   --chip-hover-overlay: rgba(255, 255, 255, 0.08);
   --chip-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.45);
+
+  /* Checkbox */
+  --checkbox-bg: #1f1f23;
+  --checkbox-border: #3d3d44;
+  --checkbox-border-hover: #4d4d55;
+
+  --checkbox-checked-bg: #12b886;
+  --checkbox-checked-bg-hover: #20c997;
+  --checkbox-checked-border: #12b886;
+  --checkbox-checked-fg: #081c15;
+
+  --checkbox-indeterminate-bg: #12b886;
+  --checkbox-indeterminate-fg: #081c15;
+
+  --checkbox-label: #f1f3f5;
+  --checkbox-description: #909296;
+  --checkbox-error: #ff6b6b;
+
+  --checkbox-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.35);
+  --checkbox-disabled-opacity: 0.4;
+  --checkbox-disabled-bg: #2a2a2e;
+  --checkbox-disabled-border: #3d3d44;
 }
