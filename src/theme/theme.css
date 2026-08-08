@@ -134,6 +134,20 @@
   --radio-gap: 8px;
   --radio-group-gap-vertical: 10px;
   --radio-group-gap-horizontal: 16px;
+
+  /* Textarea */
+  --textarea-padding-xs: 6px 10px;
+  --textarea-padding-sm: 8px 12px;
+  --textarea-padding-md: 10px 14px;
+  --textarea-font-xs: 12px;
+  --textarea-font-sm: 13px;
+  --textarea-font-md: 14px;
+  --textarea-radius: 6px;
+  --textarea-label-font: 13px;
+  --textarea-desc-font: 12px;
+  --textarea-min-height-xs: 56px;
+  --textarea-min-height-sm: 68px;
+  --textarea-min-height-md: 80px;
 }
 
 :root[data-theme='light'] {
@@ -324,6 +338,28 @@
   --radio-disabled-opacity: 0.55;
   --radio-disabled-bg: #f1f3f5;
   --radio-disabled-border: #dee2e6;
+
+  /* Textarea */
+  --textarea-bg: #ffffff;
+  --textarea-fg: #212529;
+  --textarea-placeholder: #868e96;
+  --textarea-border: #ced4da;
+  --textarea-border-hover: #adb5bd;
+  --textarea-border-focus: #0ca678;
+  --textarea-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.2);
+
+  --textarea-label: #212529;
+  --textarea-label-required: #e03131;
+  --textarea-description: #868e96;
+  --textarea-error: #e03131;
+
+  --textarea-disabled-bg: #f1f3f5;
+  --textarea-disabled-fg: #adb5bd;
+  --textarea-disabled-border: #dee2e6;
+
+  --textarea-counter: #868e96;
+  --textarea-counter-over: #e03131;
+  --textarea-resize-handle: #ced4da;
 }
 
 :root[data-theme='dark'] {
@@ -515,4 +551,26 @@
   --radio-disabled-opacity: 0.4;
   --radio-disabled-bg: #2a2a2e;
   --radio-disabled-border: #3d3d44;
+
+  /* Textarea */
+  --textarea-bg: #1f1f23;
+  --textarea-fg: #f1f3f5;
+  --textarea-placeholder: #6c757d;
+  --textarea-border: #3d3d44;
+  --textarea-border-hover: #4d4d55;
+  --textarea-border-focus: #12b886;
+  --textarea-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.25);
+
+  --textarea-label: #f1f3f5;
+  --textarea-label-required: #ff6b6b;
+  --textarea-description: #909296;
+  --textarea-error: #ff6b6b;
+
+  --textarea-disabled-bg: #2a2a2e;
+  --textarea-disabled-fg: #6c757d;
+  --textarea-disabled-border: #3d3d44;
+
+  --textarea-counter: #909296;
+  --textarea-counter-over: #ff6b6b;
+  --textarea-resize-handle: #3d3d44;
 }
