@@ -1,0 +1,185 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: inherit;
+}
+
+.tabs--orientation-vertical {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.tabs__list {
+  display: flex;
+  gap: var(--tabs-list-gap);
+  position: relative;
+}
+
+.tabs--orientation-vertical .tabs__list {
+  flex-direction: column;
+}
+
+.tabs--orientation-horizontal .tabs__list {
+  flex-direction: row;
+}
+
+.tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.tabs__tab:focus-visible {
+  outline: none;
+  box-shadow: var(--tabs-focus-ring);
+  z-index: 1;
+}
+
+.tabs__tab-section {
+  display: inline-flex;
+  align-items: center;
+}
+.tabs__tab-section > svg {
+  width: 1em;
+  height: 1em;
+}
+
+.tabs__tab--disabled {
+  cursor: not-allowed;
+  opacity: var(--tabs-disabled-opacity);
+}
+
+.tabs--size-xs .tabs__tab {
+  height: var(--tabs-tab-height-xs);
+  padding: var(--tabs-tab-padding-xs);
+  font-size: var(--tabs-tab-font-xs);
+}
+.tabs--size-sm .tabs__tab {
+  height: var(--tabs-tab-height-sm);
+  padding: var(--tabs-tab-padding-sm);
+  font-size: var(--tabs-tab-font-sm);
+}
+.tabs--size-md .tabs__tab {
+  height: var(--tabs-tab-height-md);
+  padding: var(--tabs-tab-padding-md);
+  font-size: var(--tabs-tab-font-md);
+}
+
+.tabs--variant-default .tabs__list--with-border {
+  border-bottom: 1px solid var(--tabs-default-border);
+  gap: 0;
+}
+
+.tabs--variant-default .tabs__tab {
+  color: var(--tabs-default-fg);
+  position: relative;
+  border-radius: 0;
+}
+
+.tabs--variant-default .tabs__tab:hover:not(.tabs__tab--disabled) {
+  color: var(--tabs-default-fg-hover);
+}
+
+.tabs--variant-default .tabs__tab--active {
+  color: var(--tabs-default-active-fg);
+  font-weight: 500;
+}
+
+.tabs--variant-default .tabs__tab--active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--tabs-default-active-border);
+  border-radius: 2px 2px 0 0;
+}
+
+.tabs--variant-default.tabs--orientation-vertical .tabs__list--with-border {
+  border-bottom: none;
+  border-right: 1px solid var(--tabs-default-border);
+  gap: 0;
+}
+.tabs--variant-default.tabs--orientation-vertical .tabs__tab {
+  justify-content: flex-start;
+}
+.tabs--variant-default.tabs--orientation-vertical .tabs__tab--active::after {
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: -1px;
+  width: 2px;
+  height: auto;
+  border-radius: 2px 0 0 2px;
+}
+
+.tabs--variant-pills .tabs__list {
+  background: var(--tabs-pills-bg);
+  padding: 3px;
+  border-radius: calc(var(--tabs-radius) + 2px);
+  gap: 2px;
+}
+
+.tabs--variant-pills .tabs__tab {
+  color: var(--tabs-pills-fg);
+  border-radius: var(--tabs-radius);
+}
+
+.tabs--variant-pills .tabs__tab:hover:not(.tabs__tab--disabled):not(.tabs__tab--active) {
+  color: var(--tabs-pills-active-fg);
+}
+
+.tabs--variant-pills .tabs__tab--active {
+  background: var(--tabs-pills-active-bg);
+  color: var(--tabs-pills-active-fg);
+  box-shadow: var(--tabs-pills-shadow);
+  font-weight: 500;
+}
+
+.tabs--variant-outline .tabs__list {
+  gap: 4px;
+}
+
+.tabs--variant-outline .tabs__tab {
+  color: var(--tabs-outline-fg);
+  border: 1px solid var(--tabs-outline-border);
+  border-radius: var(--tabs-radius);
+  background: transparent;
+}
+
+.tabs--variant-outline .tabs__tab:hover:not(.tabs__tab--disabled):not(.tabs__tab--active) {
+  background: var(--tabs-pills-bg);
+}
+
+.tabs--variant-outline .tabs__tab--active {
+  background: var(--tabs-outline-active-bg);
+  color: var(--tabs-outline-active-fg);
+  border-color: var(--tabs-outline-active-border);
+  font-weight: 500;
+}
+
+.tabs__panel {
+  color: var(--tabs-panel-fg);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tabs__panel:focus-visible {
+  outline: 2px solid var(--tabs-default-active-border);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
