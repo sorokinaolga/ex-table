@@ -161,6 +161,21 @@
   --tabs-tab-font-md: 14px;
   --tabs-radius: 6px;
   --tabs-list-gap: 2px;
+
+  /* FileInput */
+  --file-input-padding-xs: 12px;
+  --file-input-padding-sm: 16px;
+  --file-input-padding-md: 20px;
+  --file-input-radius: 8px;
+  --file-input-font-xs: 12px;
+  --file-input-font-sm: 13px;
+  --file-input-font-md: 14px;
+  --file-input-icon-size-xs: 20px;
+  --file-input-icon-size-sm: 24px;
+  --file-input-icon-size-md: 28px;
+  --file-input-label-font: 13px;
+  --file-input-desc-font: 12px;
+  --file-input-gap: 6px;
 }
 
 :root[data-theme='light'] {
@@ -396,6 +411,35 @@
   --tabs-disabled-opacity: 0.5;
   --tabs-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.25);
   --tabs-panel-fg: #212529;
+
+  /* FileInput */
+  --file-input-bg: #f8f9fa;
+  --file-input-bg-hover: #f1f3f5;
+  --file-input-bg-drag: #e6fcf5;
+  --file-input-border: #ced4da;
+  --file-input-border-hover: #adb5bd;
+  --file-input-border-drag: #0ca678;
+  --file-input-border-focus: #0ca678;
+  --file-input-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.2);
+
+  --file-input-fg: #212529;
+  --file-input-placeholder: #868e96;
+  --file-input-icon: #868e96;
+  --file-input-icon-drag: #0ca678;
+
+  --file-input-label: #212529;
+  --file-input-label-required: #e03131;
+  --file-input-description: #868e96;
+  --file-input-error: #e03131;
+
+  --file-input-disabled-bg: #f1f3f5;
+  --file-input-disabled-fg: #adb5bd;
+  --file-input-disabled-border: #dee2e6;
+
+  --file-input-file-bg: #ffffff;
+  --file-input-file-border: #dee2e6;
+  --file-input-file-fg: #212529;
+  --file-input-file-meta: #868e96;
 }
 
 :root[data-theme='dark'] {
@@ -632,4 +676,33 @@
   --tabs-disabled-opacity: 0.4;
   --tabs-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.45);
   --tabs-panel-fg: #f1f3f5;
+
+  /* FileInput */
+  --file-input-bg: #1f1f23;
+  --file-input-bg-hover: #26262b;
+  --file-input-bg-drag: #17332a;
+  --file-input-border: #3d3d44;
+  --file-input-border-hover: #4d4d55;
+  --file-input-border-drag: #12b886;
+  --file-input-border-focus: #12b886;
+  --file-input-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.25);
+
+  --file-input-fg: #f1f3f5;
+  --file-input-placeholder: #909296;
+  --file-input-icon: #6c757d;
+  --file-input-icon-drag: #12b886;
+
+  --file-input-label: #f1f3f5;
+  --file-input-label-required: #ff6b6b;
+  --file-input-description: #909296;
+  --file-input-error: #ff6b6b;
+
+  --file-input-disabled-bg: #2a2a2e;
+  --file-input-disabled-fg: #6c757d;
+  --file-input-disabled-border: #3d3d44;
+
+  --file-input-file-bg: #26262b;
+  --file-input-file-border: #3d3d44;
+  --file-input-file-fg: #f1f3f5;
+  --file-input-file-meta: #909296;
 }
