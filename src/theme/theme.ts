@@ -7,6 +7,7 @@ export interface SemanticTheme {
   fg: string;
   surface: string;
   surfaceHover: string;
+  surfaceActive: string;
   border: string;
   borderHover: string;
 
@@ -39,6 +40,7 @@ export const lightTheme: SemanticTheme = {
   fg: palette.gray[8],
   surface: palette.white,
   surfaceHover: palette.gray[1],
+  surfaceActive: palette.gray[2],
   border: palette.gray[4],
   borderHover: palette.gray[5],
 
@@ -71,6 +73,7 @@ export const darkTheme: SemanticTheme = {
   fg: palette.gray[1],
   surface: '#1f1f23',
   surfaceHover: '#2a2a2e',
+  surfaceActive: '#3a3a42',
   border: '#3d3d44',
   borderHover: '#4d4d55',
 

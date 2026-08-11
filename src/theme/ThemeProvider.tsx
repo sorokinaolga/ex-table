@@ -6,6 +6,7 @@ import { resolveTheme } from './resolveTheme';
 import { useLocalStorage } from '../storage/useLocalStorage';
 import { STORAGE_KEYS } from '../storage/keys';
 import { ThemeContext } from './theme-context';
+import './theme.css';
 
 const STYLE_ELEMENT_ID = 'theme-variables';
 

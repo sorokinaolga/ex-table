@@ -10,11 +10,25 @@
   --btn-font-md: 14px;
   --btn-radius: 6px;
 
-  --btn-accent-fg: #ffffff;
+  --btn-default-bg: var(--theme-surface-hover);
+  --btn-default-bg-hover: var(--theme-surface-active);
+  --btn-default-fg: var(--theme-fg);
+  --btn-default-border: var(--theme-border);
+
+  --btn-accent-bg: var(--theme-accent);
+  --btn-accent-bg-hover: var(--theme-accent-hover);
+  --btn-accent-bg-active: var(--theme-accent-active);
+  --btn-accent-fg: var(--theme-accent-fg);
   --btn-accent-border: transparent;
 
-  --btn-warning-fg: #ffffff;
+  --btn-warning-bg: var(--theme-warning);
+  --btn-warning-bg-hover: var(--theme-warning-hover);
+  --btn-warning-bg-active: var(--theme-warning-active);
+  --btn-warning-fg: var(--theme-warning-fg);
   --btn-warning-border: transparent;
+
+  --btn-focus-ring: var(--theme-focus-ring);
+  --btn-disabled-opacity: 0.55;
 
   --input-height-xs: 26px;
   --input-height-sm: 32px;
@@ -179,22 +193,6 @@
 }
 
 :root[data-theme='light'] {
-  --btn-default-bg: #f1f3f5;
-  --btn-default-bg-hover: #e9ecef;
-  --btn-default-fg: #212529;
-  --btn-default-border: #dee2e6;
-
-  --btn-accent-bg: #0ca678;
-  --btn-accent-bg-hover: #099268;
-  --btn-accent-bg-active: #087f5b;
-
-  --btn-warning-bg: #e8590c;
-  --btn-warning-bg-hover: #cf4e08;
-  --btn-warning-bg-active: #b8410a;
-
-  --btn-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.4);
-  --btn-disabled-opacity: 0.55;
-
   --input-bg: #ffffff;
   --input-fg: #212529;
   --input-placeholder: #868e96;
@@ -443,23 +441,6 @@
 }
 
 :root[data-theme='dark'] {
-  --btn-default-fg: #f1f3f5;
-  --btn-default-bg: #2f2f35;
-  --btn-default-bg-hover: #3a3a42;
-  --btn-default-border: #45454d;
-
-  --btn-accent-bg: #12b886;
-  --btn-accent-bg-hover: #20c997;
-  --btn-accent-bg-active: #0ca678;
-  --btn-accent-fg: #081c15;
-
-  --btn-warning-bg: #f76707;
-  --btn-warning-bg-hover: #ff7a1a;
-  --btn-warning-bg-active: #e8590c;
-
-  --btn-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.5);
-  --btn-disabled-opacity: 0.5;
-
   --input-bg: #1f1f23;
   --input-fg: #f1f3f5;
   --input-placeholder: #6c757d;

@@ -5,6 +5,7 @@ const VAR_MAP: Record<keyof SemanticTheme, string> = {
   fg: '--theme-fg',
   surface: '--theme-surface',
   surfaceHover: '--theme-surface-hover',
+  surfaceActive: '--theme-surface-active',
   border: '--theme-border',
   borderHover: '--theme-border-hover',
 
