@@ -5,6 +5,7 @@ export type ColorScheme = 'light' | 'dark';
 export interface SemanticTheme {
   bg: string;
   fg: string;
+  fgSubtle: string;
   surface: string;
   surfaceHover: string;
   surfaceActive: string;
@@ -38,6 +39,7 @@ export interface SemanticTheme {
 export const lightTheme: SemanticTheme = {
   bg: palette.white,
   fg: palette.gray[8],
+  fgSubtle: palette.gray[7],
   surface: palette.white,
   surfaceHover: palette.gray[1],
   surfaceActive: palette.gray[2],
@@ -71,6 +73,7 @@ export const lightTheme: SemanticTheme = {
 export const darkTheme: SemanticTheme = {
   bg: '#141418',
   fg: palette.gray[1],
+  fgSubtle: palette.gray[5],
   surface: '#1f1f23',
   surfaceHover: '#2a2a2e',
   surfaceActive: '#3a3a42',

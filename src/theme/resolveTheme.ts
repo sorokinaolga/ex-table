@@ -3,6 +3,7 @@ import type { SemanticTheme, Theme } from './theme';
 const VAR_MAP: Record<keyof SemanticTheme, string> = {
   bg: '--theme-bg',
   fg: '--theme-fg',
+  fgSubtle: '--theme-fg-subtle',
   surface: '--theme-surface',
   surfaceHover: '--theme-surface-hover',
   surfaceActive: '--theme-surface-active',

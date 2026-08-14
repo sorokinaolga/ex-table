@@ -43,6 +43,26 @@
   --input-label-font: 13px;
   --input-error-font: 12px;
 
+  --icon-btn-default-bg: transparent;
+  --icon-btn-default-bg-hover: var(--theme-surface-hover);
+  --icon-btn-default-fg: var(--theme-fg);
+  --icon-btn-default-border: transparent;
+
+  --icon-btn-accent-bg: var(--theme-accent);
+  --icon-btn-accent-bg-hover: var(--theme-accent-hover);
+  --icon-btn-accent-fg: var(--theme-accent-fg);
+
+  --icon-btn-warning-bg: var(--theme-warning);
+  --icon-btn-warning-bg-hover: var(--theme-warning-hover);
+  --icon-btn-warning-fg: var(--theme-warning-fg);
+
+  --icon-btn-subtle-bg: transparent;
+  --icon-btn-subtle-bg-hover: var(--theme-surface-hover);
+  --icon-btn-subtle-fg: var(--theme-fg-subtle);
+
+  --icon-btn-focus-ring: var(--theme-focus-ring);
+  --icon-btn-disabled-opacity: 0.5;
+
   --layout-radius: 0;
   --layout-header-height: 60px;
   --layout-footer-height: 56px;
@@ -240,27 +260,6 @@
   --sheet-tab-fg: #1967d2;
   --sheet-tab-active-bg: #ffffff;
   --sheet-tab-border: #e0e0e0;
-
-  /* ButtonIcon */
-  --icon-btn-default-bg: transparent;
-  --icon-btn-default-bg-hover: #f1f3f5;
-  --icon-btn-default-fg: #212529;
-  --icon-btn-default-border: transparent;
-
-  --icon-btn-accent-bg: #0ca678;
-  --icon-btn-accent-bg-hover: #099268;
-  --icon-btn-accent-fg: #ffffff;
-
-  --icon-btn-warning-bg: #e8590c;
-  --icon-btn-warning-bg-hover: #cf4e08;
-  --icon-btn-warning-fg: #ffffff;
-
-  --icon-btn-subtle-bg: transparent;
-  --icon-btn-subtle-bg-hover: #e9ecef;
-  --icon-btn-subtle-fg: #495057;
-
-  --icon-btn-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.4);
-  --icon-btn-disabled-opacity: 0.5;
 
   /* Chip */
   --chip-default-bg: #f1f3f5;
@@ -488,27 +487,6 @@
   --sheet-tab-fg: #8ab4f8;
   --sheet-tab-active-bg: #1f1f23;
   --sheet-tab-border: #2a2a2e;
-
-  /* ButtonIcon */
-  --icon-btn-default-bg: transparent;
-  --icon-btn-default-bg-hover: #2a2a2e;
-  --icon-btn-default-fg: #f1f3f5;
-  --icon-btn-default-border: transparent;
-
-  --icon-btn-accent-bg: #12b886;
-  --icon-btn-accent-bg-hover: #20c997;
-  --icon-btn-accent-fg: #081c15;
-
-  --icon-btn-warning-bg: #f76707;
-  --icon-btn-warning-bg-hover: #ff7a1a;
-  --icon-btn-warning-fg: #ffffff;
-
-  --icon-btn-subtle-bg: transparent;
-  --icon-btn-subtle-bg-hover: #2a2a2e;
-  --icon-btn-subtle-fg: #adb5bd;
-
-  --icon-btn-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.5);
-  --icon-btn-disabled-opacity: 0.4;
 
   /* Chip */
   --chip-default-bg: #2a2a2e;
