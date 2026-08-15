@@ -100,6 +100,24 @@
   --chip-radius-pill: 999px;
   --chip-gap: 4px;
 
+  --chip-default-bg: var(--theme-surface-hover);
+  --chip-default-fg: var(--theme-fg);
+  --chip-default-border: var(--theme-border);
+
+  --chip-accent-bg: var(--theme-accent);
+  --chip-accent-fg: var(--theme-accent-fg);
+  --chip-accent-border: transparent;
+
+  --chip-warning-bg: var(--theme-warning);
+  --chip-warning-fg: var(--theme-warning-fg);
+  --chip-warning-border: transparent;
+
+  --chip-subtle-bg: transparent;
+  --chip-subtle-fg: var(--theme-fg-subtle);
+  --chip-subtle-border: var(--theme-border);
+
+  --chip-focus-ring: var(--theme-focus-ring);
+
   /* Checkbox */
   --checkbox-size-xs: 14px;
   --checkbox-size-sm: 16px;
@@ -260,26 +278,6 @@
   --sheet-tab-fg: #1967d2;
   --sheet-tab-active-bg: #ffffff;
   --sheet-tab-border: #e0e0e0;
-
-  /* Chip */
-  --chip-default-bg: #f1f3f5;
-  --chip-default-fg: #212529;
-  --chip-default-border: #dee2e6;
-
-  --chip-accent-bg: #0ca678;
-  --chip-accent-fg: #ffffff;
-  --chip-accent-border: transparent;
-
-  --chip-warning-bg: #e8590c;
-  --chip-warning-fg: #ffffff;
-  --chip-warning-border: transparent;
-
-  --chip-subtle-bg: transparent;
-  --chip-subtle-fg: #495057;
-  --chip-subtle-border: #ced4da;
-
-  --chip-hover-overlay: rgba(0, 0, 0, 0.06);
-  --chip-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.35);
 
   /* Checkbox */
   --checkbox-bg: #ffffff;
@@ -487,26 +485,6 @@
   --sheet-tab-fg: #8ab4f8;
   --sheet-tab-active-bg: #1f1f23;
   --sheet-tab-border: #2a2a2e;
-
-  /* Chip */
-  --chip-default-bg: #2a2a2e;
-  --chip-default-fg: #f1f3f5;
-  --chip-default-border: #3d3d44;
-
-  --chip-accent-bg: #12b886;
-  --chip-accent-fg: #081c15;
-  --chip-accent-border: transparent;
-
-  --chip-warning-bg: #f76707;
-  --chip-warning-fg: #ffffff;
-  --chip-warning-border: transparent;
-
-  --chip-subtle-bg: transparent;
-  --chip-subtle-fg: #adb5bd;
-  --chip-subtle-border: #3d3d44;
-
-  --chip-hover-overlay: rgba(255, 255, 255, 0.08);
-  --chip-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.45);
 
   /* Checkbox */
   --checkbox-bg: #1f1f23;

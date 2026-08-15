@@ -126,7 +126,7 @@
 }
 .chip__remove:hover {
   opacity: 1;
-  background-color: var(--chip-hover-overlay);
+  background-color: color-mix(in srgb, currentColor 8%, transparent);
 }
 .chip__remove:focus-visible {
   outline: none;
