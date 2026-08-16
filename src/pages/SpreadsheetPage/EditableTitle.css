@@ -17,30 +17,27 @@
   white-space: nowrap;
 }
 .editable-title__button:hover {
-  background: var(--input-disabled-bg);
-  border-color: var(--input-border);
+  background: var(--theme-surface-hover);
+  border-color: var(--theme-border);
 }
 .editable-title__button:focus-visible {
-  outline: none;
-  border-color: var(--input-border-focus);
-  box-shadow: var(--input-focus-ring);
+  border-color: var(--theme-accent);
+  box-shadow: var(--theme-focus-ring);
 }
-
 .editable-title__placeholder {
-  color: var(--input-placeholder);
+  color: var(--theme-placeholder);
 }
-
 .editable-title__input {
   height: 28px;
   padding: 0 8px;
-  border: 1px solid var(--input-border-focus);
   border-radius: 4px;
-  background: var(--input-bg);
-  color: var(--input-fg);
   font: inherit;
   font-size: 14px;
   font-weight: 500;
   outline: none;
-  box-shadow: var(--input-focus-ring);
   max-width: 400px;
+  border: 1px solid var(--theme-accent);
+  background: var(--theme-surface);
+  color: var(--theme-fg);
+  box-shadow: var(--theme-focus-ring);
 }

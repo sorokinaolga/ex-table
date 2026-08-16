@@ -30,6 +30,7 @@
   --btn-focus-ring: var(--theme-focus-ring);
   --btn-disabled-opacity: 0.55;
 
+  /* Input */
   --input-height-xs: 26px;
   --input-height-sm: 32px;
   --input-height-md: 38px;
@@ -43,6 +44,24 @@
   --input-label-font: 13px;
   --input-error-font: 12px;
 
+  --input-bg: var(--theme-surface);
+  --input-fg: var(--theme-fg);
+  --input-placeholder: var(--theme-placeholder);
+  --input-border: var(--theme-border);
+  --input-border-hover: var(--theme-border-hover);
+  --input-border-focus: var(--theme-accent);
+  --input-focus-ring: var(--theme-focus-ring);
+
+  --input-label: var(--theme-fg);
+  --input-label-required: var(--theme-error);
+  --input-error: var(--theme-error);
+  --input-description: var(--theme-muted);
+
+  --input-disabled-bg: var(--theme-disabled-bg);
+  --input-disabled-fg: var(--theme-disabled-fg);
+  --input-disabled-border: var(--theme-disabled-border);
+
+  /* ButtonIcon */
   --icon-btn-default-bg: transparent;
   --icon-btn-default-bg-hover: var(--theme-surface-hover);
   --icon-btn-default-fg: var(--theme-fg);
@@ -231,23 +250,6 @@
 }
 
 :root[data-theme='light'] {
-  --input-bg: #ffffff;
-  --input-fg: #212529;
-  --input-placeholder: #868e96;
-  --input-border: #ced4da;
-  --input-border-hover: #adb5bd;
-  --input-border-focus: #0ca678;
-  --input-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.2);
-
-  --input-label: #212529;
-  --input-label-required: #e03131;
-  --input-error: #e03131;
-  --input-description: #868e96;
-
-  --input-disabled-bg: #f1f3f5;
-  --input-disabled-fg: #adb5bd;
-  --input-disabled-border: #dee2e6;
-
   --layout-bg: #f8f9fa;
   --layout-fg: #212529;
   --layout-header-bg: #ffffff;
@@ -438,23 +440,6 @@
 }
 
 :root[data-theme='dark'] {
-  --input-bg: #1f1f23;
-  --input-fg: #f1f3f5;
-  --input-placeholder: #6c757d;
-  --input-border: #3d3d44;
-  --input-border-hover: #4d4d55;
-  --input-border-focus: #12b886;
-  --input-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.25);
-
-  --input-label: #f1f3f5;
-  --input-label-required: #ff6b6b;
-  --input-error: #ff6b6b;
-  --input-description: #909296;
-
-  --input-disabled-bg: #2a2a2e;
-  --input-disabled-fg: #6c757d;
-  --input-disabled-border: #3d3d44;
-
   --layout-bg: #141418;
   --layout-fg: #f1f3f5;
   --layout-header-bg: #1f1f23;
