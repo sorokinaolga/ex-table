@@ -150,6 +150,27 @@
   --checkbox-desc-font: 12px;
   --checkbox-gap: 8px;
 
+  --checkbox-bg: var(--theme-surface);
+  --checkbox-border: var(--theme-border);
+  --checkbox-border-hover: var(--theme-border-hover);
+
+  --checkbox-checked-bg: var(--theme-accent);
+  --checkbox-checked-bg-hover: var(--theme-accent-hover);
+  --checkbox-checked-border: var(--theme-accent);
+  --checkbox-checked-fg: var(--theme-accent-fg);
+
+  --checkbox-indeterminate-bg: var(--theme-accent);
+  --checkbox-indeterminate-fg: var(--theme-accent-fg);
+
+  --checkbox-label: var(--theme-fg);
+  --checkbox-description: var(--theme-muted);
+  --checkbox-error: var(--theme-error);
+
+  --checkbox-focus-ring: var(--theme-focus-ring);
+  --checkbox-disabled-opacity: 0.5;
+  --checkbox-disabled-bg: var(--theme-disabled-bg);
+  --checkbox-disabled-border: var(--theme-disabled-border);
+
   /* Select: размеры */
   --select-height-xs: 26px;
   --select-height-sm: 32px;
@@ -280,28 +301,6 @@
   --sheet-tab-fg: #1967d2;
   --sheet-tab-active-bg: #ffffff;
   --sheet-tab-border: #e0e0e0;
-
-  /* Checkbox */
-  --checkbox-bg: #ffffff;
-  --checkbox-border: #ced4da;
-  --checkbox-border-hover: #adb5bd;
-
-  --checkbox-checked-bg: #0ca678;
-  --checkbox-checked-bg-hover: #099268;
-  --checkbox-checked-border: #0ca678;
-  --checkbox-checked-fg: #ffffff;
-
-  --checkbox-indeterminate-bg: #0ca678;
-  --checkbox-indeterminate-fg: #ffffff;
-
-  --checkbox-label: #212529;
-  --checkbox-description: #868e96;
-  --checkbox-error: #e03131;
-
-  --checkbox-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.25);
-  --checkbox-disabled-opacity: 0.55;
-  --checkbox-disabled-bg: #f1f3f5;
-  --checkbox-disabled-border: #dee2e6;
 
   /* Select */
   --select-bg: #ffffff;
@@ -470,28 +469,6 @@
   --sheet-tab-fg: #8ab4f8;
   --sheet-tab-active-bg: #1f1f23;
   --sheet-tab-border: #2a2a2e;
-
-  /* Checkbox */
-  --checkbox-bg: #1f1f23;
-  --checkbox-border: #3d3d44;
-  --checkbox-border-hover: #4d4d55;
-
-  --checkbox-checked-bg: #12b886;
-  --checkbox-checked-bg-hover: #20c997;
-  --checkbox-checked-border: #12b886;
-  --checkbox-checked-fg: #081c15;
-
-  --checkbox-indeterminate-bg: #12b886;
-  --checkbox-indeterminate-fg: #081c15;
-
-  --checkbox-label: #f1f3f5;
-  --checkbox-description: #909296;
-  --checkbox-error: #ff6b6b;
-
-  --checkbox-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.35);
-  --checkbox-disabled-opacity: 0.4;
-  --checkbox-disabled-bg: #2a2a2e;
-  --checkbox-disabled-border: #3d3d44;
 
   /* Select */
   --select-bg: #1f1f23;
