@@ -227,6 +227,22 @@
   --radio-group-gap-vertical: 10px;
   --radio-group-gap-horizontal: 16px;
 
+  --radio-bg: var(--theme-surface);
+  --radio-border: var(--theme-border);
+  --radio-border-hover: var(--theme-border-hover);
+
+  --radio-checked-border: var(--theme-accent);
+  --radio-checked-dot: var(--theme-accent);
+
+  --radio-label: var(--theme-fg);
+  --radio-description: var(--theme-muted);
+  --radio-error: var(--theme-error);
+
+  --radio-focus-ring: var(--theme-focus-ring);
+  --radio-disabled-opacity: 0.55;
+  --radio-disabled-bg: var(--theme-disabled-bg);
+  --radio-disabled-border: var(--theme-disabled-border);
+
   /* Textarea */
   --textarea-padding-xs: 6px 10px;
   --textarea-padding-sm: 8px 12px;
@@ -345,23 +361,6 @@
 
   --toggle-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.25);
   --toggle-disabled-opacity: 0.55;
-
-  /* Radio */
-  --radio-bg: #ffffff;
-  --radio-border: #ced4da;
-  --radio-border-hover: #adb5bd;
-
-  --radio-checked-border: #0ca678;
-  --radio-checked-dot: #0ca678;
-
-  --radio-label: #212529;
-  --radio-description: #868e96;
-  --radio-error: #e03131;
-
-  --radio-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.25);
-  --radio-disabled-opacity: 0.55;
-  --radio-disabled-bg: #f1f3f5;
-  --radio-disabled-border: #dee2e6;
 
   /* Textarea */
   --textarea-bg: #ffffff;
@@ -513,23 +512,6 @@
 
   --toggle-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.35);
   --toggle-disabled-opacity: 0.4;
-
-  /* Radio */
-  --radio-bg: #1f1f23;
-  --radio-border: #3d3d44;
-  --radio-border-hover: #4d4d55;
-
-  --radio-checked-border: #12b886;
-  --radio-checked-dot: #12b886;
-
-  --radio-label: #f1f3f5;
-  --radio-description: #909296;
-  --radio-error: #ff6b6b;
-
-  --radio-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.35);
-  --radio-disabled-opacity: 0.4;
-  --radio-disabled-bg: #2a2a2e;
-  --radio-disabled-border: #3d3d44;
 
   /* Textarea */
   --textarea-bg: #1f1f23;
