@@ -212,6 +212,21 @@
   --toggle-label-font-md: 14px;
   --toggle-desc-font: 12px;
 
+  --toggle-track-bg: var(--theme-border);
+  --toggle-track-bg-hover: var(--theme-border-hover);
+  --toggle-track-checked-bg: var(--theme-accent);
+  --toggle-track-checked-bg-hover: var(--theme-accent-hover);
+
+  --toggle-thumb-bg: #ffffff;
+  --toggle-thumb-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+  --toggle-label: var(--theme-fg);
+  --toggle-description: var(--theme-muted);
+  --toggle-error: var(--theme-error);
+
+  --toggle-focus-ring: var(--theme-focus-ring);
+  --toggle-disabled-opacity: 0.55;
+
   /* Radio */
   --radio-size-xs: 14px;
   --radio-size-sm: 16px;
@@ -345,22 +360,6 @@
   --select-group-label: #868e96;
   --select-empty-fg: #868e96;
   --select-error: #e03131;
-
-  /* Toggle */
-  --toggle-track-bg: #ced4da;
-  --toggle-track-bg-hover: #adb5bd;
-  --toggle-track-checked-bg: #0ca678;
-  --toggle-track-checked-bg-hover: #099268;
-
-  --toggle-thumb-bg: #ffffff;
-  --toggle-thumb-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-
-  --toggle-label: #212529;
-  --toggle-description: #868e96;
-  --toggle-error: #e03131;
-
-  --toggle-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.25);
-  --toggle-disabled-opacity: 0.55;
 
   /* Textarea */
   --textarea-bg: #ffffff;
@@ -496,22 +495,6 @@
   --select-group-label: #909296;
   --select-empty-fg: #909296;
   --select-error: #ff6b6b;
-
-  /* Toggle */
-  --toggle-track-bg: #3d3d44;
-  --toggle-track-bg-hover: #4d4d55;
-  --toggle-track-checked-bg: #12b886;
-  --toggle-track-checked-bg-hover: #20c997;
-
-  --toggle-thumb-bg: #f1f3f5;
-  --toggle-thumb-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-
-  --toggle-label: #f1f3f5;
-  --toggle-description: #909296;
-  --toggle-error: #ff6b6b;
-
-  --toggle-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.35);
-  --toggle-disabled-opacity: 0.4;
 
   /* Textarea */
   --textarea-bg: #1f1f23;
