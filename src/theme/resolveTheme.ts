@@ -7,6 +7,8 @@ const VAR_MAP: Record<keyof SemanticTheme, string> = {
   surface: '--theme-surface',
   surfaceHover: '--theme-surface-hover',
   surfaceActive: '--theme-surface-active',
+  elevated: '--theme-elevated',
+
   border: '--theme-border',
   borderHover: '--theme-border-hover',
 
@@ -31,6 +33,7 @@ const VAR_MAP: Record<keyof SemanticTheme, string> = {
   placeholder: '--theme-placeholder',
   muted: '--theme-muted',
 
+  shadowLg: '--theme-shadow-lg',
   focusRing: '--theme-focus-ring',
 };
 

@@ -185,6 +185,33 @@
   --select-label-font: 13px;
   --select-desc-font: 12px;
 
+  --select-bg: var(--theme-surface);
+  --select-fg: var(--theme-fg);
+  --select-placeholder: var(--theme-placeholder);
+  --select-border: var(--theme-border);
+  --select-border-hover: var(--theme-border-hover);
+  --select-border-focus: var(--theme-accent);
+  --select-focus-ring: var(--theme-focus-ring);
+
+  --select-arrow: var(--theme-muted);
+  --select-disabled-bg: var(--theme-disabled-bg);
+  --select-disabled-fg: var(--theme-disabled-fg);
+  --select-disabled-border: var(--theme-disabled-border);
+
+  --select-dropdown-bg: var(--theme-elevated);
+  --select-dropdown-border: var(--theme-border);
+  --select-dropdown-shadow: var(--theme-shadow-lg);
+
+  --select-option-fg: var(--theme-fg);
+  --select-option-hover-bg: var(--theme-surface-active);
+  --select-option-selected-bg: var(--theme-accent-subtle);
+  --select-option-selected-fg: var(--theme-accent);
+  --select-option-disabled-fg: var(--theme-disabled-fg);
+
+  --select-group-label: var(--theme-muted);
+  --select-empty-fg: var(--theme-muted);
+  --select-error: var(--theme-error);
+
   /* Dropdown */
   --select-dropdown-radius: 8px;
   --select-dropdown-padding: 4px;
@@ -354,34 +381,6 @@
   --sheet-tab-active-bg: #ffffff;
   --sheet-tab-border: #e0e0e0;
 
-  /* Select */
-  --select-bg: #ffffff;
-  --select-fg: #212529;
-  --select-placeholder: #868e96;
-  --select-border: #ced4da;
-  --select-border-hover: #adb5bd;
-  --select-border-focus: #0ca678;
-  --select-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.2);
-
-  --select-arrow: #868e96;
-  --select-disabled-bg: #f1f3f5;
-  --select-disabled-fg: #adb5bd;
-  --select-disabled-border: #dee2e6;
-
-  --select-dropdown-bg: #ffffff;
-  --select-dropdown-border: #dee2e6;
-  --select-dropdown-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-
-  --select-option-fg: #212529;
-  --select-option-hover-bg: #f1f3f5;
-  --select-option-selected-bg: #e6fcf5;
-  --select-option-selected-fg: #0ca678;
-  --select-option-disabled-fg: #adb5bd;
-
-  --select-group-label: #868e96;
-  --select-empty-fg: #868e96;
-  --select-error: #e03131;
-
   /* Tabs */
   --tabs-default-fg: #495057;
   --tabs-default-fg-hover: #212529;
@@ -466,34 +465,6 @@
   --sheet-tab-fg: #8ab4f8;
   --sheet-tab-active-bg: #1f1f23;
   --sheet-tab-border: #2a2a2e;
-
-  /* Select */
-  --select-bg: #1f1f23;
-  --select-fg: #f1f3f5;
-  --select-placeholder: #6c757d;
-  --select-border: #3d3d44;
-  --select-border-hover: #4d4d55;
-  --select-border-focus: #12b886;
-  --select-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.25);
-
-  --select-arrow: #909296;
-  --select-disabled-bg: #2a2a2e;
-  --select-disabled-fg: #6c757d;
-  --select-disabled-border: #3d3d44;
-
-  --select-dropdown-bg: #26262b;
-  --select-dropdown-border: #3d3d44;
-  --select-dropdown-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-
-  --select-option-fg: #f1f3f5;
-  --select-option-hover-bg: #35353b;
-  --select-option-selected-bg: #17332a;
-  --select-option-selected-fg: #12b886;
-  --select-option-disabled-fg: #6c757d;
-
-  --select-group-label: #909296;
-  --select-empty-fg: #909296;
-  --select-error: #ff6b6b;
 
   /* Tabs */
   --tabs-default-fg: #adb5bd;
