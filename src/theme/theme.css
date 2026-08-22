@@ -333,6 +333,28 @@
   --tabs-radius: 6px;
   --tabs-list-gap: 2px;
 
+  --tabs-default-fg: var(--theme-fg-subtle);
+  --tabs-default-fg-hover: var(--theme-fg);
+  --tabs-default-active-fg: var(--theme-accent);
+  --tabs-default-active-border: var(--theme-accent);
+  --tabs-default-border: var(--theme-border);
+
+  --tabs-pills-bg: var(--theme-surface-hover);
+  --tabs-pills-fg: var(--theme-fg-subtle);
+  --tabs-pills-active-bg: var(--theme-elevated);
+  --tabs-pills-active-fg: var(--theme-fg);
+  --tabs-pills-shadow: var(--theme-shadow-sm);
+
+  --tabs-outline-fg: var(--theme-fg-subtle);
+  --tabs-outline-border: var(--theme-border);
+  --tabs-outline-active-bg: var(--theme-accent);
+  --tabs-outline-active-fg: var(--theme-accent-fg);
+  --tabs-outline-active-border: var(--theme-accent);
+
+  --tabs-disabled-opacity: 0.5;
+  --tabs-focus-ring: var(--theme-focus-ring);
+  --tabs-panel-fg: var(--theme-fg);
+
   /* FileInput */
   --file-input-padding-xs: 12px;
   --file-input-padding-sm: 16px;
@@ -380,29 +402,6 @@
   --sheet-tab-fg: #1967d2;
   --sheet-tab-active-bg: #ffffff;
   --sheet-tab-border: #e0e0e0;
-
-  /* Tabs */
-  --tabs-default-fg: #495057;
-  --tabs-default-fg-hover: #212529;
-  --tabs-default-active-fg: #0ca678;
-  --tabs-default-active-border: #0ca678;
-  --tabs-default-border: #dee2e6;
-
-  --tabs-pills-bg: #f1f3f5;
-  --tabs-pills-fg: #495057;
-  --tabs-pills-active-bg: #ffffff;
-  --tabs-pills-active-fg: #212529;
-  --tabs-pills-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-
-  --tabs-outline-fg: #495057;
-  --tabs-outline-border: #dee2e6;
-  --tabs-outline-active-bg: #0ca678;
-  --tabs-outline-active-fg: #ffffff;
-  --tabs-outline-active-border: #0ca678;
-
-  --tabs-disabled-opacity: 0.5;
-  --tabs-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.25);
-  --tabs-panel-fg: #212529;
 
   /* FileInput */
   --file-input-bg: #f8f9fa;
@@ -465,29 +464,6 @@
   --sheet-tab-fg: #8ab4f8;
   --sheet-tab-active-bg: #1f1f23;
   --sheet-tab-border: #2a2a2e;
-
-  /* Tabs */
-  --tabs-default-fg: #adb5bd;
-  --tabs-default-fg-hover: #f1f3f5;
-  --tabs-default-active-fg: #12b886;
-  --tabs-default-active-border: #12b886;
-  --tabs-default-border: #2a2a2e;
-
-  --tabs-pills-bg: #1f1f23;
-  --tabs-pills-fg: #adb5bd;
-  --tabs-pills-active-bg: #2a2a2e;
-  --tabs-pills-active-fg: #f1f3f5;
-  --tabs-pills-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-
-  --tabs-outline-fg: #adb5bd;
-  --tabs-outline-border: #3d3d44;
-  --tabs-outline-active-bg: #12b886;
-  --tabs-outline-active-fg: #081c15;
-  --tabs-outline-active-border: #12b886;
-
-  --tabs-disabled-opacity: 0.4;
-  --tabs-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.45);
-  --tabs-panel-fg: #f1f3f5;
 
   /* FileInput */
   --file-input-bg: #1f1f23;
