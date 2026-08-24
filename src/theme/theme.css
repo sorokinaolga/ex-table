@@ -369,6 +369,35 @@
   --file-input-label-font: 13px;
   --file-input-desc-font: 12px;
   --file-input-gap: 6px;
+
+  --file-input-bg: var(--theme-surface-hover);
+  --file-input-bg-hover: var(--theme-surface-active);
+  --file-input-bg-drag: var(--theme-accent-subtle);
+
+  --file-input-border: var(--theme-border);
+  --file-input-border-hover: var(--theme-border-hover);
+  --file-input-border-drag: var(--theme-accent);
+  --file-input-border-focus: var(--theme-accent);
+  --file-input-focus-ring: var(--theme-focus-ring);
+
+  --file-input-fg: var(--theme-fg);
+  --file-input-placeholder: var(--theme-muted);
+  --file-input-icon: var(--theme-muted);
+  --file-input-icon-drag: var(--theme-accent);
+
+  --file-input-label: var(--theme-fg);
+  --file-input-label-required: var(--theme-error);
+  --file-input-description: var(--theme-muted);
+  --file-input-error: var(--theme-error);
+
+  --file-input-disabled-bg: var(--theme-disabled-bg);
+  --file-input-disabled-fg: var(--theme-disabled-fg);
+  --file-input-disabled-border: var(--theme-disabled-border);
+
+  --file-input-file-bg: var(--theme-surface);
+  --file-input-file-border: var(--theme-border);
+  --file-input-file-fg: var(--theme-fg);
+  --file-input-file-meta: var(--theme-muted);
 }
 
 :root[data-theme='light'] {
@@ -402,35 +431,6 @@
   --sheet-tab-fg: #1967d2;
   --sheet-tab-active-bg: #ffffff;
   --sheet-tab-border: #e0e0e0;
-
-  /* FileInput */
-  --file-input-bg: #f8f9fa;
-  --file-input-bg-hover: #f1f3f5;
-  --file-input-bg-drag: #e6fcf5;
-  --file-input-border: #ced4da;
-  --file-input-border-hover: #adb5bd;
-  --file-input-border-drag: #0ca678;
-  --file-input-border-focus: #0ca678;
-  --file-input-focus-ring: 0 0 0 3px rgba(12, 166, 120, 0.2);
-
-  --file-input-fg: #212529;
-  --file-input-placeholder: #868e96;
-  --file-input-icon: #868e96;
-  --file-input-icon-drag: #0ca678;
-
-  --file-input-label: #212529;
-  --file-input-label-required: #e03131;
-  --file-input-description: #868e96;
-  --file-input-error: #e03131;
-
-  --file-input-disabled-bg: #f1f3f5;
-  --file-input-disabled-fg: #adb5bd;
-  --file-input-disabled-border: #dee2e6;
-
-  --file-input-file-bg: #ffffff;
-  --file-input-file-border: #dee2e6;
-  --file-input-file-fg: #212529;
-  --file-input-file-meta: #868e96;
 }
 
 :root[data-theme='dark'] {
@@ -464,33 +464,4 @@
   --sheet-tab-fg: #8ab4f8;
   --sheet-tab-active-bg: #1f1f23;
   --sheet-tab-border: #2a2a2e;
-
-  /* FileInput */
-  --file-input-bg: #1f1f23;
-  --file-input-bg-hover: #26262b;
-  --file-input-bg-drag: #17332a;
-  --file-input-border: #3d3d44;
-  --file-input-border-hover: #4d4d55;
-  --file-input-border-drag: #12b886;
-  --file-input-border-focus: #12b886;
-  --file-input-focus-ring: 0 0 0 3px rgba(18, 184, 134, 0.25);
-
-  --file-input-fg: #f1f3f5;
-  --file-input-placeholder: #909296;
-  --file-input-icon: #6c757d;
-  --file-input-icon-drag: #12b886;
-
-  --file-input-label: #f1f3f5;
-  --file-input-label-required: #ff6b6b;
-  --file-input-description: #909296;
-  --file-input-error: #ff6b6b;
-
-  --file-input-disabled-bg: #2a2a2e;
-  --file-input-disabled-fg: #6c757d;
-  --file-input-disabled-border: #3d3d44;
-
-  --file-input-file-bg: #26262b;
-  --file-input-file-border: #3d3d44;
-  --file-input-file-fg: #f1f3f5;
-  --file-input-file-meta: #909296;
 }
