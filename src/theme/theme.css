@@ -86,6 +86,12 @@
   --layout-header-height: 60px;
   --layout-footer-height: 56px;
 
+  --layout-bg: var(--theme-bg-subtle);
+  --layout-fg: var(--theme-fg);
+  --layout-header-bg: var(--theme-surface);
+  --layout-footer-bg: var(--theme-bg);
+  --layout-border: var(--theme-border-subtle);
+
   --list-hover-bg: transparent;
   --list-border: transparent;
 
@@ -401,12 +407,6 @@
 }
 
 :root[data-theme='light'] {
-  --layout-bg: #f8f9fa;
-  --layout-fg: #212529;
-  --layout-header-bg: #ffffff;
-  --layout-footer-bg: #f1f3f5;
-  --layout-border: #e9ecef;
-
   --list-hover-bg: #f1f3f5;
   --list-border: #e9ecef;
   --list-icon-color: #0ca678;
@@ -434,12 +434,6 @@
 }
 
 :root[data-theme='dark'] {
-  --layout-bg: #141418;
-  --layout-fg: #f1f3f5;
-  --layout-header-bg: #1f1f23;
-  --layout-footer-bg: #1a1a1e;
-  --layout-border: #2a2a2e;
-
   --list-hover-bg: #1f1f23;
   --list-border: #2a2a2e;
   --list-icon-color: #12b886;

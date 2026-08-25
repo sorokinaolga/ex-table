@@ -2,6 +2,7 @@ import type { SemanticTheme, Theme } from './theme';
 
 const VAR_MAP: Record<keyof SemanticTheme, string> = {
   bg: '--theme-bg',
+  bgSubtle: '--theme-bg-subtle',
   fg: '--theme-fg',
   fgSubtle: '--theme-fg-subtle',
   surface: '--theme-surface',
@@ -11,6 +12,7 @@ const VAR_MAP: Record<keyof SemanticTheme, string> = {
 
   border: '--theme-border',
   borderHover: '--theme-border-hover',
+  borderSubtle: '--theme-border-subtle',
 
   accent: '--theme-accent',
   accentHover: '--theme-accent-hover',

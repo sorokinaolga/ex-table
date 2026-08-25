@@ -4,6 +4,7 @@ export type ColorScheme = 'light' | 'dark';
 
 export interface SemanticTheme {
   bg: string;
+  bgSubtle: string;
   fg: string;
   fgSubtle: string;
   surface: string;
@@ -14,6 +15,7 @@ export interface SemanticTheme {
   shadowLg: string;
   border: string;
   borderHover: string;
+  borderSubtle: string;
 
   accent: string;
   accentHover: string;
@@ -41,6 +43,7 @@ export interface SemanticTheme {
 
 export const lightTheme: SemanticTheme = {
   bg: palette.white,
+  bgSubtle: palette.gray[0],
   fg: palette.gray[8],
   fgSubtle: palette.gray[7],
   surface: palette.white,
@@ -51,6 +54,7 @@ export const lightTheme: SemanticTheme = {
   shadowSm: '0 1px 2px rgba(0, 0, 0, 0.08)',
   shadowLg: '0 8px 24px rgba(0, 0, 0, 0.12)',
   borderHover: palette.gray[5],
+  borderSubtle: palette.gray[2],
 
   accent: palette.green[7],
   accentHover: palette.green[8],
@@ -78,6 +82,7 @@ export const lightTheme: SemanticTheme = {
 
 export const darkTheme: SemanticTheme = {
   bg: '#141418',
+  bgSubtle: '#141418',
   fg: palette.gray[1],
   fgSubtle: palette.gray[5],
   surface: '#1f1f23',
@@ -88,6 +93,7 @@ export const darkTheme: SemanticTheme = {
   shadowSm: '0 1px 2px rgba(0, 0, 0, 0.4)',
   shadowLg: '0 8px 24px rgba(0, 0, 0, 0.5)',
   borderHover: '#4d4d55',
+  borderSubtle: '#2a2a2e',
 
   accent: palette.green[6],
   accentHover: palette.green[5],
