@@ -92,8 +92,12 @@
   --layout-footer-bg: var(--theme-bg);
   --layout-border: var(--theme-border-subtle);
 
-  --list-hover-bg: transparent;
-  --list-border: transparent;
+  --list-hover-bg: var(--theme-surface-hover);
+  --list-border: var(--theme-border-subtle);
+  --list-icon-color: var(--theme-accent);
+  --list-owner-color: var(--theme-muted);
+  --list-owner-me-color: var(--theme-accent);
+  --list-time-color: var(--theme-muted);
 
   --sheet-col-width: 100px;
   --sheet-cell-size: 24px;
@@ -407,13 +411,6 @@
 }
 
 :root[data-theme='light'] {
-  --list-hover-bg: #f1f3f5;
-  --list-border: #e9ecef;
-  --list-icon-color: #0ca678;
-  --list-owner-color: #868e96;
-  --list-owner-me-color: #0ca678;
-  --list-time-color: #868e96;
-
   --sheet-bg: #ffffff;
   --sheet-grid: #e0e0e0;
   --sheet-header-bg: #f8f9fa;
@@ -434,13 +431,6 @@
 }
 
 :root[data-theme='dark'] {
-  --list-hover-bg: #1f1f23;
-  --list-border: #2a2a2e;
-  --list-icon-color: #12b886;
-  --list-owner-color: #909296;
-  --list-owner-me-color: #12b886;
-  --list-time-color: #909296;
-
   --sheet-bg: #141418;
   --sheet-grid: #2a2a2e;
   --sheet-header-bg: #1f1f23;
