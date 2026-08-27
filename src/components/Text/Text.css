@@ -1,0 +1,81 @@
+.text {
+  margin: 0;
+  font-family: inherit;
+  color: var(--text-color, var(--theme-fg));
+}
+
+.text--size-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+.text--size-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+.text--size-md {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+.text--size-lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+.text--size-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+.text--weight-regular {
+  font-weight: var(--font-weight-regular);
+}
+.text--weight-medium {
+  font-weight: var(--font-weight-medium);
+}
+.text--weight-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+.text--weight-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text--color-default {
+  color: var(--theme-fg);
+}
+.text--color-dimmed {
+  color: var(--theme-fg-subtle);
+}
+.text--color-muted {
+  color: var(--theme-muted);
+}
+.text--color-accent {
+  color: var(--theme-accent);
+}
+.text--color-error {
+  color: var(--theme-error);
+}
+.text--color-warning {
+  color: var(--theme-warning);
+}
+.text--color-inherit {
+  color: inherit;
+}
+
+.text--italic {
+  font-style: italic;
+}
+.text--underline {
+  text-decoration: underline;
+}
+
+.text--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text--line-clamp {
+  display: -webkit-box;
+  line-clamp: var(--text-line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

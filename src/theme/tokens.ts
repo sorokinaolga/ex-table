@@ -85,9 +85,27 @@ export const fontSize = {
   sm: '13px',
   md: '14px',
   lg: '16px',
+  xl: '20px',
+} as const;
+
+export const lineHeight = {
+  xs: '1.4',
+  sm: '1.45',
+  md: '1.5',
+  lg: '1.5',
+  xl: '1.35',
+} as const;
+
+export const fontWeight = {
+  regular: '400',
+  medium: '500',
+  semibold: '600',
+  bold: '700',
 } as const;
 
 export type Palette = typeof palette;
 export type Spacing = typeof spacing;
 export type Radius = typeof radius;
 export type FontSize = typeof fontSize;
+export type LineHeight = typeof lineHeight;
+export type FontWeight = typeof fontWeight;

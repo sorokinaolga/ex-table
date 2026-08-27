@@ -51,7 +51,7 @@ function scaleToCss(prefix: string, obj: Record<string, string>): string {
 }
 
 export function resolveTheme(theme: Theme): string {
-  const { light, dark, radius, spacing, fontSize } = theme;
+  const { light, dark, radius, spacing, fontSize, lineHeight, fontWeight } = theme;
 
   return `
 /* Автогенерируется ThemeProvider. Не редактируйте вручную. */
@@ -60,6 +60,8 @@ export function resolveTheme(theme: Theme): string {
 ${scaleToCss('radius', radius)}
 ${scaleToCss('spacing', spacing)}
 ${scaleToCss('font-size', fontSize)}
+${scaleToCss('line-height', lineHeight)}
+${scaleToCss('font-weight', fontWeight)}
 }
 
 :root[data-theme='light'] {

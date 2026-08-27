@@ -1,4 +1,4 @@
-import { palette, radius, spacing, fontSize } from './tokens';
+import { palette, radius, spacing, fontSize, lineHeight, fontWeight } from './tokens';
 
 export type ColorScheme = 'light' | 'dark';
 
@@ -126,6 +126,8 @@ export interface Theme {
   radius: typeof radius;
   spacing: typeof spacing;
   fontSize: typeof fontSize;
+  lineHeight: typeof lineHeight;
+  fontWeight: typeof fontWeight;
 }
 
 export const defaultTheme: Theme = {
@@ -135,6 +137,8 @@ export const defaultTheme: Theme = {
   radius,
   spacing,
   fontSize,
+  lineHeight,
+  fontWeight,
 };
 
 export function createTheme(overrides: Partial<Theme> = {}): Theme {
@@ -146,5 +150,7 @@ export function createTheme(overrides: Partial<Theme> = {}): Theme {
     radius: { ...defaultTheme.radius, ...overrides.radius },
     spacing: { ...defaultTheme.spacing, ...overrides.spacing },
     fontSize: { ...defaultTheme.fontSize, ...overrides.fontSize },
+    lineHeight: { ...defaultTheme.lineHeight, ...overrides.lineHeight },
+    fontWeight: { ...defaultTheme.fontWeight, ...overrides.fontWeight },
   };
 }
