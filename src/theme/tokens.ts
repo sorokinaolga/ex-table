@@ -86,6 +86,10 @@ export const fontSize = {
   md: '14px',
   lg: '16px',
   xl: '20px',
+  '2xl': '24px',
+  '3xl': '30px',
+  '4xl': '36px',
+  '5xl': '48px',
 } as const;
 
 export const lineHeight = {
@@ -94,6 +98,10 @@ export const lineHeight = {
   md: '1.5',
   lg: '1.5',
   xl: '1.35',
+  '2xl': '1.3',
+  '3xl': '1.25',
+  '4xl': '1.2',
+  '5xl': '1.15',
 } as const;
 
 export const fontWeight = {
