@@ -1,0 +1,109 @@
+.anchor {
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition:
+    color 120ms ease,
+    text-decoration-color 120ms ease;
+}
+
+.anchor:focus-visible {
+  outline: none;
+  box-shadow: var(--anchor-focus-ring);
+}
+
+.anchor--size-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+.anchor--size-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+.anchor--size-md {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+.anchor--size-lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+.anchor--size-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+.anchor--weight-regular {
+  font-weight: var(--font-weight-regular);
+}
+.anchor--weight-medium {
+  font-weight: var(--font-weight-medium);
+}
+.anchor--weight-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+.anchor--weight-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.anchor--color-accent {
+  color: var(--anchor-accent);
+}
+.anchor--color-accent:hover {
+  color: var(--anchor-accent-hover);
+}
+.anchor--color-accent:active {
+  color: var(--anchor-accent-active);
+}
+.anchor--color-accent:visited {
+  color: var(--anchor-visited);
+}
+
+.anchor--color-default {
+  color: var(--anchor-default);
+}
+.anchor--color-default:hover {
+  color: var(--anchor-accent);
+}
+
+.anchor--color-dimmed {
+  color: var(--anchor-dimmed);
+}
+.anchor--color-dimmed:hover {
+  color: var(--theme-fg);
+}
+
+.anchor--color-inherit {
+  color: inherit;
+}
+.anchor--color-inherit:hover {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.anchor--underline-always {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.anchor--underline-always:hover {
+  text-decoration-thickness: 2px;
+}
+
+.anchor--underline-hover {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.anchor--underline-hover:hover {
+  text-decoration-color: currentColor;
+}
+
+.anchor--underline-never {
+  text-decoration: none;
+}
+.anchor--underline-never:hover {
+  text-decoration: none;
+}

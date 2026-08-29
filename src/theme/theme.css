@@ -408,6 +408,15 @@
   --file-input-file-border: var(--theme-border);
   --file-input-file-fg: var(--theme-fg);
   --file-input-file-meta: var(--theme-muted);
+
+  /* --- Anchor --- */
+  --anchor-accent: var(--theme-accent);
+  --anchor-accent-hover: var(--theme-accent-hover);
+  --anchor-accent-active: var(--theme-accent-active);
+  --anchor-visited: var(--theme-accent-active);
+  --anchor-default: var(--theme-fg);
+  --anchor-dimmed: var(--theme-fg-subtle);
+  --anchor-focus-ring: var(--theme-focus-ring);
 }
 
 :root[data-theme='light'] {
