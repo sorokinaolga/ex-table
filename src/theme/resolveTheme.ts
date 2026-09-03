@@ -35,7 +35,9 @@ const VAR_MAP: Record<keyof SemanticTheme, string> = {
   placeholder: '--theme-placeholder',
   muted: '--theme-muted',
 
+  shadowXs: '--theme-shadow-xs',
   shadowSm: '--theme-shadow-sm',
+  shadowMd: '--theme-shadow-md',
   shadowLg: '--theme-shadow-lg',
   focusRing: '--theme-focus-ring',
 };

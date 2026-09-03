@@ -1,0 +1,78 @@
+.paper {
+  box-sizing: border-box;
+  background-color: var(--paper-bg, var(--theme-surface));
+  color: var(--theme-fg);
+  border: 1px solid transparent;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.paper--variant-surface {
+  --paper-bg: var(--theme-surface);
+}
+.paper--variant-elevated {
+  --paper-bg: var(--theme-elevated);
+}
+.paper--variant-transparent {
+  --paper-bg: transparent;
+}
+
+.paper--with-border {
+  border-color: var(--theme-border);
+}
+
+.paper--radius-none {
+  border-radius: 0;
+}
+.paper--radius-xs {
+  border-radius: var(--radius-xs);
+}
+.paper--radius-sm {
+  border-radius: var(--radius-sm);
+}
+.paper--radius-md {
+  border-radius: var(--radius-md);
+}
+.paper--radius-lg {
+  border-radius: var(--radius-lg);
+}
+.paper--radius-xl {
+  border-radius: 12px;
+}
+
+.paper--shadow-none {
+  box-shadow: none;
+}
+.paper--shadow-xs {
+  box-shadow: var(--theme-shadow-xs);
+}
+.paper--shadow-sm {
+  box-shadow: var(--theme-shadow-sm);
+}
+.paper--shadow-md {
+  box-shadow: var(--theme-shadow-md);
+}
+.paper--shadow-lg {
+  box-shadow: var(--theme-shadow-lg);
+}
+
+.paper--padding-none {
+  padding: 0;
+}
+.paper--padding-xs {
+  padding: var(--spacing-xs);
+}
+.paper--padding-sm {
+  padding: var(--spacing-sm);
+}
+.paper--padding-md {
+  padding: var(--spacing-md);
+}
+.paper--padding-lg {
+  padding: var(--spacing-lg);
+}
+.paper--padding-xl {
+  padding: var(--spacing-xl);
+}

@@ -11,7 +11,9 @@ export interface SemanticTheme {
   surfaceHover: string;
   surfaceActive: string;
   elevated: string;
+  shadowXs: string;
   shadowSm: string;
+  shadowMd: string;
   shadowLg: string;
   border: string;
   borderHover: string;
@@ -51,7 +53,9 @@ export const lightTheme: SemanticTheme = {
   surfaceActive: palette.gray[2],
   border: palette.gray[4],
   elevated: '#fff',
+  shadowXs: '0 1px 2px rgba(0, 0, 0, 0.04)',
   shadowSm: '0 1px 2px rgba(0, 0, 0, 0.08)',
+  shadowMd: '0 4px 12px rgba(0, 0, 0, 0.1)',
   shadowLg: '0 8px 24px rgba(0, 0, 0, 0.12)',
   borderHover: palette.gray[5],
   borderSubtle: palette.gray[2],
@@ -90,7 +94,9 @@ export const darkTheme: SemanticTheme = {
   surfaceActive: '#3a3a42',
   border: '#3d3d44',
   elevated: '#26262b',
+  shadowXs: '0 1px 2px rgba(0, 0, 0, 0.3)',
   shadowSm: '0 1px 2px rgba(0, 0, 0, 0.4)',
+  shadowMd: '0 4px 12px rgba(0, 0, 0, 0.45)',
   shadowLg: '0 8px 24px rgba(0, 0, 0, 0.5)',
   borderHover: '#4d4d55',
   borderSubtle: '#2a2a2e',
