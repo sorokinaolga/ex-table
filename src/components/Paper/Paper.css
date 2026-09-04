@@ -59,20 +59,32 @@
 }
 
 .paper--padding-none {
+  --paper-padding-x: 0;
+  --paper-padding-y: 0;
   padding: 0;
 }
 .paper--padding-xs {
+  --paper-padding-x: var(--spacing-xs);
+  --paper-padding-y: var(--spacing-xs);
   padding: var(--spacing-xs);
 }
 .paper--padding-sm {
+  --paper-padding-x: var(--spacing-sm);
+  --paper-padding-y: var(--spacing-sm);
   padding: var(--spacing-sm);
 }
 .paper--padding-md {
+  --paper-padding-x: var(--spacing-md);
+  --paper-padding-y: var(--spacing-md);
   padding: var(--spacing-md);
 }
 .paper--padding-lg {
+  --paper-padding-x: var(--spacing-lg);
+  --paper-padding-y: var(--spacing-lg);
   padding: var(--spacing-lg);
 }
 .paper--padding-xl {
+  --paper-padding-x: var(--spacing-xl);
+  --paper-padding-y: var(--spacing-xl);
   padding: var(--spacing-xl);
 }
