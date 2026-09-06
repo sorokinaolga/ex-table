@@ -1,0 +1,22 @@
+.group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--group-gap, var(--spacing-md));
+  align-items: var(--group-align, center);
+  justify-content: var(--group-justify, flex-start);
+  min-width: 0;
+}
+
+.group--full-width {
+  width: 100%;
+}
+
+.group--nowrap {
+  flex-wrap: nowrap;
+}
+
+.group__spacer {
+  flex: 1 1 auto;
+  align-self: stretch;
+}
