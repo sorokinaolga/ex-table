@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container--size-xs {
+  max-width: 540px;
+}
+.container--size-sm {
+  max-width: 720px;
+}
+.container--size-md {
+  max-width: 960px;
+}
+.container--size-lg {
+  max-width: 1140px;
+}
+.container--size-xl {
+  max-width: 1320px;
+}
+
+.container--fluid {
+  max-width: none;
+}
