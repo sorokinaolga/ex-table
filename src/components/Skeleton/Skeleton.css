@@ -1,0 +1,78 @@
+.skeleton {
+  display: block;
+  background: var(--theme-surface-hover);
+  border-radius: var(--radius-sm);
+  flex: 0 0 auto;
+}
+
+.skeleton--radius-none {
+  border-radius: 0;
+}
+.skeleton--radius-xs {
+  border-radius: var(--radius-xs);
+}
+.skeleton--radius-sm {
+  border-radius: var(--radius-sm);
+}
+.skeleton--radius-md {
+  border-radius: var(--radius-md);
+}
+.skeleton--radius-lg {
+  border-radius: var(--radius-lg);
+}
+.skeleton--radius-xl {
+  border-radius: 12px;
+}
+.skeleton--radius-pill {
+  border-radius: 999px;
+}
+
+.skeleton--circle {
+  border-radius: 50%;
+}
+
+.skeleton--animation-pulse {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton--animation-wave {
+  position: relative;
+  overflow: hidden;
+  background: var(--theme-surface-hover);
+}
+
+.skeleton--animation-wave::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent 0%, var(--theme-surface-active) 50%, transparent 100%);
+  animation: skeleton-wave 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-wave {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton--animation-none {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton--animation-pulse,
+  .skeleton--animation-wave::after {
+    animation: none;
+  }
+}
