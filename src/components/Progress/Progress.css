@@ -1,0 +1,134 @@
+.progress {
+  display: flex;
+  width: 100%;
+  background: var(--theme-surface-hover);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress--size-xs {
+  height: 4px;
+  font-size: 8px;
+}
+.progress--size-sm {
+  height: 6px;
+  font-size: 9px;
+}
+.progress--size-md {
+  height: 10px;
+  font-size: 10px;
+}
+.progress--size-lg {
+  height: 14px;
+  font-size: 11px;
+}
+.progress--size-xl {
+  height: 20px;
+  font-size: 12px;
+}
+
+.progress--radius-none {
+  border-radius: 0;
+}
+.progress--radius-xs {
+  border-radius: var(--radius-xs);
+}
+.progress--radius-sm {
+  border-radius: var(--radius-sm);
+}
+.progress--radius-md {
+  border-radius: var(--radius-md);
+}
+.progress--radius-lg {
+  border-radius: var(--radius-lg);
+}
+.progress--radius-xl {
+  border-radius: 12px;
+}
+.progress--radius-pill {
+  border-radius: 999px;
+}
+
+.progress__bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 300ms ease;
+  overflow: hidden;
+}
+
+.progress__section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 300ms ease;
+  overflow: hidden;
+}
+
+.progress__bar--color-accent,
+.progress__section--color-accent {
+  background: var(--theme-accent);
+  color: var(--theme-accent-fg);
+}
+
+.progress__bar--color-warning,
+.progress__section--color-warning {
+  background: var(--theme-warning);
+  color: var(--theme-warning-fg);
+}
+
+.progress__bar--color-error,
+.progress__section--color-error {
+  background: var(--theme-error);
+  color: var(--theme-error-fg);
+}
+
+.progress__bar--color-default,
+.progress__section--color-default {
+  background: var(--theme-fg-subtle);
+  color: var(--theme-fg);
+}
+
+.progress__bar--striped,
+.progress__section.progress__bar--striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 16px 16px;
+}
+
+.progress__bar--animated,
+.progress--animated .progress__section {
+  animation: progress-stripes 1s linear infinite;
+}
+
+@keyframes progress-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 16px 0;
+  }
+}
+
+.progress__label {
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+.progress__label--inside {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress__bar,
+  .progress__section {
+    transition: none;
+  }
+  .progress__bar--animated,
+  .progress--animated .progress__section {
+    animation: none;
+  }
+}
