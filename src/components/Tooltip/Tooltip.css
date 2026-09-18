@@ -1,0 +1,68 @@
+.tooltip {
+  position: fixed;
+  z-index: 1000;
+  padding: 6px 10px;
+  background: var(--theme-fg);
+  color: var(--theme-bg);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+  font-weight: var(--font-weight-medium);
+  pointer-events: none;
+  animation: tooltip-fade-in 100ms ease-out;
+  word-wrap: break-word;
+}
+
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltip__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+}
+
+.tooltip--position-top .tooltip__arrow,
+.tooltip--position-top-start .tooltip__arrow,
+.tooltip--position-top-end .tooltip__arrow {
+  top: 100%;
+  left: var(--arrow-x);
+}
+
+.tooltip--position-bottom .tooltip__arrow,
+.tooltip--position-bottom-start .tooltip__arrow,
+.tooltip--position-bottom-end .tooltip__arrow {
+  top: 0;
+  left: var(--arrow-x);
+}
+
+.tooltip--position-left .tooltip__arrow,
+.tooltip--position-left-start .tooltip__arrow,
+.tooltip--position-left-end .tooltip__arrow {
+  left: 100%;
+  top: var(--arrow-y);
+}
+
+.tooltip--position-right .tooltip__arrow,
+.tooltip--position-right-start .tooltip__arrow,
+.tooltip--position-right-end .tooltip__arrow {
+  left: 0;
+  top: var(--arrow-y);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tooltip {
+    animation: none;
+  }
+}
