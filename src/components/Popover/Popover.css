@@ -1,0 +1,106 @@
+.popover {
+  position: fixed;
+  z-index: 800;
+  background: var(--theme-elevated);
+  color: var(--theme-fg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--theme-border-subtle);
+  animation: popover-in 120ms ease-out;
+  pointer-events: auto;
+}
+
+@keyframes popover-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popover--radius-none {
+  border-radius: 0;
+}
+.popover--radius-xs {
+  border-radius: var(--radius-xs);
+}
+.popover--radius-sm {
+  border-radius: var(--radius-sm);
+}
+.popover--radius-md {
+  border-radius: var(--radius-md);
+}
+.popover--radius-lg {
+  border-radius: var(--radius-lg);
+}
+.popover--radius-xl {
+  border-radius: 12px;
+}
+
+.popover--shadow-none {
+  box-shadow: none;
+  border-color: var(--theme-border);
+}
+.popover--shadow-sm {
+  box-shadow: var(--theme-shadow-sm);
+}
+.popover--shadow-md {
+  box-shadow: var(--theme-shadow-md);
+}
+.popover--shadow-lg {
+  box-shadow: var(--theme-shadow-lg);
+}
+
+.popover__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  border: 1px solid var(--theme-border-subtle);
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+}
+
+.popover--position-top .popover__arrow,
+.popover--position-top-start .popover__arrow,
+.popover--position-top-end .popover__arrow {
+  top: 100%;
+  left: var(--arrow-x);
+  border-left: none;
+  border-top: none;
+}
+
+.popover--position-bottom .popover__arrow,
+.popover--position-bottom-start .popover__arrow,
+.popover--position-bottom-end .popover__arrow {
+  top: 0;
+  left: var(--arrow-x);
+  border-right: none;
+  border-bottom: none;
+}
+
+.popover--position-left .popover__arrow,
+.popover--position-left-start .popover__arrow,
+.popover--position-left-end .popover__arrow {
+  left: 100%;
+  top: var(--arrow-y);
+  border-top: none;
+  border-left: none;
+}
+
+.popover--position-right .popover__arrow,
+.popover--position-right-start .popover__arrow,
+.popover--position-right-end .popover__arrow {
+  left: 0;
+  top: var(--arrow-y);
+  border-right: none;
+  border-bottom: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popover {
+    animation: none;
+  }
+}
