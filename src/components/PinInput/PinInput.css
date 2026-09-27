@@ -1,0 +1,96 @@
+.pin-input {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.pin-input__label {
+  font-size: var(--input-label-font);
+  font-weight: 500;
+  color: var(--input-label);
+  line-height: 1.2;
+}
+
+.pin-input__required {
+  color: var(--input-label-required);
+}
+
+.pin-input__group {
+  display: flex;
+  gap: 8px;
+}
+
+.pin-input__cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius);
+  background: var(--input-bg);
+  color: var(--input-fg);
+  font: inherit;
+  font-weight: 600;
+  outline: none;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
+}
+
+.pin-input__cell:hover:not(:disabled) {
+  border-color: var(--input-border-hover);
+}
+
+.pin-input__cell:focus {
+  border-color: var(--input-border-focus);
+  box-shadow: var(--input-focus-ring);
+}
+
+.pin-input__cell:disabled {
+  background: var(--input-disabled-bg);
+  border-color: var(--input-disabled-border);
+  color: var(--input-disabled-fg);
+  cursor: not-allowed;
+}
+
+.pin-input--size-xs .pin-input__cell {
+  width: 28px;
+  height: 28px;
+  font-size: 13px;
+}
+.pin-input--size-sm .pin-input__cell {
+  width: 34px;
+  height: 34px;
+  font-size: 15px;
+}
+.pin-input--size-md .pin-input__cell {
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+}
+.pin-input--size-lg .pin-input__cell {
+  width: 52px;
+  height: 52px;
+  font-size: 22px;
+}
+
+.pin-input--error .pin-input__cell {
+  border-color: var(--input-error);
+}
+.pin-input--error .pin-input__cell:focus {
+  box-shadow: 0 0 0 3px rgba(224, 49, 49, 0.2);
+}
+
+.pin-input__error {
+  font-size: var(--input-error-font);
+  color: var(--input-error);
+  line-height: 1.2;
+}
+
+.pin-input__description {
+  font-size: var(--input-error-font);
+  color: var(--input-description);
+  line-height: 1.2;
+}
