@@ -1,0 +1,290 @@
+.multi-select {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: inherit;
+  position: relative;
+}
+
+.multi-select--full-width {
+  width: 100%;
+}
+
+.multi-select__label {
+  font-size: var(--input-label-font);
+  font-weight: 500;
+  color: var(--input-label);
+  line-height: 1.2;
+}
+
+.multi-select__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-radius);
+  background: var(--input-bg);
+  cursor: text;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
+  padding: 4px 8px;
+  min-height: var(--input-height-md);
+}
+
+.multi-select__wrapper:hover {
+  border-color: var(--input-border-hover);
+}
+.multi-select__wrapper:focus-within {
+  border-color: var(--input-border-focus);
+  box-shadow: var(--input-focus-ring);
+}
+
+.multi-select--size-xs .multi-select__wrapper {
+  min-height: var(--input-height-xs);
+  padding: 2px 6px;
+  gap: 4px;
+  font-size: var(--input-font-xs);
+}
+.multi-select--size-sm .multi-select__wrapper {
+  min-height: var(--input-height-sm);
+  padding: 3px 8px;
+  gap: 4px;
+  font-size: var(--input-font-sm);
+}
+.multi-select--size-md .multi-select__wrapper {
+  min-height: var(--input-height-md);
+  padding: 4px 8px;
+  gap: 6px;
+  font-size: var(--input-font-md);
+}
+
+.multi-select__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.multi-select__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 22px;
+  padding: 0 4px 0 8px;
+  border-radius: 999px;
+  background: var(--theme-surface-hover);
+  color: var(--theme-fg);
+  font-size: var(--input-font-xs);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.multi-select--size-xs .multi-select__tag {
+  height: 18px;
+  padding: 0 3px 0 6px;
+  font-size: 10px;
+}
+.multi-select--size-sm .multi-select__tag {
+  height: 20px;
+  padding: 0 4px 0 7px;
+  font-size: 11px;
+}
+
+.multi-select__tag-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.multi-select__tag-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--theme-fg-subtle);
+  font-size: 10px;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+.multi-select__tag-remove:hover {
+  background: var(--theme-surface-active);
+  color: var(--theme-fg);
+}
+
+.multi-select__field {
+  flex: 1 1 auto;
+  min-width: 80px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--input-fg);
+  font: inherit;
+  font-size: inherit;
+  padding: 0;
+  height: 22px;
+}
+.multi-select__field::placeholder {
+  color: var(--input-placeholder);
+}
+.multi-select__field:disabled {
+  cursor: not-allowed;
+}
+
+.multi-select__clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--input-placeholder);
+  transition:
+    color 120ms ease,
+    background-color 120ms ease;
+  flex: 0 0 auto;
+}
+.multi-select__clear:hover {
+  color: var(--input-fg);
+  background: var(--input-disabled-bg);
+}
+
+.multi-select__dropdown {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 4px;
+  background: var(--theme-elevated);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--theme-shadow-md);
+  animation: multi-select-in 100ms ease-out;
+}
+
+@keyframes multi-select-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.multi-select__option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: var(--input-font-sm);
+  color: var(--theme-fg);
+  cursor: pointer;
+  user-select: none;
+}
+.multi-select__option--highlighted {
+  background: var(--theme-surface-hover);
+}
+.multi-select__option--selected {
+  color: var(--theme-accent);
+  font-weight: 500;
+}
+.multi-select__option--disabled {
+  color: var(--theme-disabled-fg);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.multi-select__checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--input-border);
+  border-radius: var(--radius-xs);
+  background: var(--input-bg);
+  color: var(--theme-accent-fg);
+  font-size: 10px;
+  flex: 0 0 auto;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+.multi-select__option--selected .multi-select__checkbox {
+  background: var(--theme-accent);
+  border-color: var(--theme-accent);
+}
+
+.multi-select__option-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multi-select__empty {
+  padding: 12px 10px;
+  font-size: var(--input-font-sm);
+  color: var(--theme-muted);
+  text-align: center;
+}
+
+.multi-select--error .multi-select__wrapper {
+  border-color: var(--input-error);
+}
+.multi-select--error .multi-select__wrapper:focus-within {
+  box-shadow: 0 0 0 3px rgba(224, 49, 49, 0.2);
+}
+
+.multi-select__error {
+  font-size: var(--input-error-font);
+  color: var(--input-error);
+  line-height: 1.2;
+}
+
+.multi-select__description {
+  font-size: var(--input-error-font);
+  color: var(--input-description);
+  line-height: 1.2;
+}
+
+.multi-select--disabled .multi-select__wrapper {
+  background: var(--input-disabled-bg);
+  border-color: var(--input-disabled-border);
+  cursor: not-allowed;
+}
+.multi-select--disabled .multi-select__field {
+  color: var(--input-disabled-fg);
+  cursor: not-allowed;
+}
+.multi-select--disabled .multi-select__tag {
+  background: var(--input-disabled-bg);
+  color: var(--input-disabled-fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .multi-select__dropdown {
+    animation: none;
+  }
+}
