@@ -1,0 +1,120 @@
+.pagination {
+  display: inline-block;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.pagination__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--pagination-size, 36px);
+  height: var(--pagination-size, 36px);
+  padding: 0 4px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--theme-fg);
+  font: inherit;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.pagination__button:hover:not(:disabled):not(.pagination__button--active) {
+  background: var(--theme-surface-hover);
+}
+
+.pagination__button:focus-visible {
+  outline: none;
+  box-shadow: var(--theme-focus-ring);
+}
+
+.pagination__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.pagination__button--active {
+  background: var(--pagination-color, var(--theme-accent));
+  color: var(--pagination-fg, var(--theme-accent-fg));
+}
+
+.pagination__button--control {
+  color: var(--theme-fg-subtle);
+}
+
+.pagination__button--control > svg {
+  width: 1em;
+  height: 1em;
+}
+
+.pagination__dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--pagination-size, 36px);
+  height: var(--pagination-size, 36px);
+  color: var(--theme-muted);
+  user-select: none;
+}
+
+.pagination__dots > svg {
+  width: 1em;
+  height: 1em;
+}
+
+.pagination--size-xs {
+  --pagination-size: 24px;
+  font-size: 12px;
+}
+.pagination--size-sm {
+  --pagination-size: 30px;
+  font-size: 13px;
+}
+.pagination--size-md {
+  --pagination-size: 36px;
+  font-size: 14px;
+}
+.pagination--size-lg {
+  --pagination-size: 44px;
+  font-size: 15px;
+}
+
+.pagination--color-accent {
+  --pagination-color: var(--theme-accent);
+  --pagination-fg: var(--theme-accent-fg);
+}
+.pagination--color-warning {
+  --pagination-color: var(--theme-warning);
+  --pagination-fg: var(--theme-warning-fg);
+}
+.pagination--color-error {
+  --pagination-color: var(--theme-error);
+  --pagination-fg: var(--theme-error-fg);
+}
+.pagination--color-default {
+  --pagination-color: var(--theme-surface-active);
+  --pagination-fg: var(--theme-fg);
+}
+
+.pagination--disabled {
+  opacity: 0.6;
+}
