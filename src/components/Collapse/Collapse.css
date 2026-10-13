@@ -1,0 +1,14 @@
+.collapse {
+  will-change: grid-template-rows;
+}
+
+.collapse__content {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapse,
+  .collapse__content {
+    transition: none !important;
+  }
+}
